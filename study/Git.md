@@ -1,5 +1,5 @@
 
-####Git结构
+#### Git结构
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-8a3a4e85e4fb0d3a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

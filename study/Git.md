@@ -1,24 +1,45 @@
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
-[]()
+[一、Git结构](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%B8%80git%E7%BB%93%E6%9E%84)
+
+[二、Git和代码托管中心](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%BA%8Cgit%E5%92%8C%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E4%B8%AD%E5%BF%83)
+
+[三、本地库和远程库的交互方式](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%B8%89%E6%9C%AC%E5%9C%B0%E5%BA%93%E5%92%8C%E8%BF%9C%E7%A8%8B%E5%BA%93%E7%9A%84%E4%BA%A4%E4%BA%92%E6%96%B9%E5%BC%8F)
+
+[四、设置签名](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%9B%9B%E8%AE%BE%E7%BD%AE%E7%AD%BE%E5%90%8D)
+
+[五、添加提交以及查看状态操作](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%BA%94%E6%B7%BB%E5%8A%A0%E6%8F%90%E4%BA%A4%E4%BB%A5%E5%8F%8A%E6%9F%A5%E7%9C%8B%E7%8A%B6%E6%80%81%E6%93%8D%E4%BD%9C)
+
+[六、版本穿梭](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%85%AD%E7%89%88%E6%9C%AC%E7%A9%BF%E6%A2%AD)
+
+[七、基于索引值前进后退版本-推荐](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%B8%83%E5%9F%BA%E4%BA%8E%E7%B4%A2%E5%BC%95%E5%80%BC%E5%89%8D%E8%BF%9B%E5%90%8E%E9%80%80%E7%89%88%E6%9C%AC-%E6%8E%A8%E8%8D%90)
+
+[八、使用^ 后退版本](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%85%AB%E4%BD%BF%E7%94%A8-%E5%90%8E%E9%80%80%E7%89%88%E6%9C%AC)
+
+[九、使用～ 后退版本](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%B9%9D%E4%BD%BF%E7%94%A8-%E5%90%8E%E9%80%80%E7%89%88%E6%9C%AC)
+
+[十、reset命令的三个参数对比](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81reset%E5%91%BD%E4%BB%A4%E7%9A%84%E4%B8%89%E4%B8%AA%E5%8F%82%E6%95%B0%E5%AF%B9%E6%AF%94)
+
+[十一、永久删除文件后找回](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E4%B8%80%E6%B0%B8%E4%B9%85%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E5%90%8E%E6%89%BE%E5%9B%9E)
+
+[十二、添加到暂存区的删除文件找回](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E4%BA%8C%E6%B7%BB%E5%8A%A0%E5%88%B0%E6%9A%82%E5%AD%98%E5%8C%BA%E7%9A%84%E5%88%A0%E9%99%A4%E6%96%87%E4%BB%B6%E6%89%BE%E5%9B%9E)
+
+[十三、比较文件](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E4%B8%89%E6%AF%94%E8%BE%83%E6%96%87%E4%BB%B6)
+
+[十四、分支概述](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E5%9B%9B%E5%88%86%E6%94%AF%E6%A6%82%E8%BF%B0)
+
+[十五、分支操作](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E4%BA%94%E5%88%86%E6%94%AF%E6%93%8D%E4%BD%9C)
+
+[十六、解决合并分支后产生的冲突](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E5%85%AD%E8%A7%A3%E5%86%B3%E5%90%88%E5%B9%B6%E5%88%86%E6%94%AF%E5%90%8E%E4%BA%A7%E7%94%9F%E7%9A%84%E5%86%B2%E7%AA%81)
+
+[十七、本地创建远程仓库别名](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E4%B8%83%E6%9C%AC%E5%9C%B0%E5%88%9B%E5%BB%BA%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E5%88%AB%E5%90%8D)
+
+[十八、远程仓库推送操作](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E5%85%AB%E8%BF%9C%E7%A8%8B%E4%BB%93%E5%BA%93%E6%8E%A8%E9%80%81%E6%93%8D%E4%BD%9C)
+
+[十九、克隆操作](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E5%8D%81%E4%B9%9D%E5%85%8B%E9%9A%86%E6%93%8D%E4%BD%9C)
+
+[二十、远程库修改的拉取](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%BA%8C%E5%8D%81%E8%BF%9C%E7%A8%8B%E5%BA%93%E4%BF%AE%E6%94%B9%E7%9A%84%E6%8B%89%E5%8F%96)
+
+[二十一、协同开发冲突的解决](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%BA%8C%E5%8D%81%E4%B8%80%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3)
+
 
 
 

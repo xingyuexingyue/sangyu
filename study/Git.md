@@ -1,3 +1,5 @@
+## 目录
+
 [一、Git结构](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%B8%80git%E7%BB%93%E6%9E%84)
 
 [二、Git和代码托管中心](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%BA%8Cgit%E5%92%8C%E4%BB%A3%E7%A0%81%E6%89%98%E7%AE%A1%E4%B8%AD%E5%BF%83)
@@ -39,9 +41,6 @@
 [二十、远程库修改的拉取](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%BA%8C%E5%8D%81%E8%BF%9C%E7%A8%8B%E5%BA%93%E4%BF%AE%E6%94%B9%E7%9A%84%E6%8B%89%E5%8F%96)
 
 [二十一、协同开发冲突的解决](https://github.com/xingyuexingyue/sangyu/blob/master/study/Git.md#%E4%BA%8C%E5%8D%81%E4%B8%80%E5%8D%8F%E5%90%8C%E5%BC%80%E5%8F%91%E5%86%B2%E7%AA%81%E7%9A%84%E8%A7%A3%E5%86%B3)
-
-
-
 
 ## 一、Git结构
 

@@ -1,30 +1,30 @@
 ## 目录
 
-[一、什么是分布式系统](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F)
+[一、什么是分布式系统](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E4%B8%80%E4%BB%80%E4%B9%88%E6%98%AF%E5%88%86%E5%B8%83%E5%BC%8F%E7%B3%BB%E7%BB%9F)
 
-[二、应用的架构演变图](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E5%BA%94%E7%94%A8%E7%9A%84%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8F%98%E5%9B%BE)
+[二、应用的架构演变图](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E4%BA%8C%E5%BA%94%E7%94%A8%E7%9A%84%E6%9E%B6%E6%9E%84%E6%BC%94%E5%8F%98%E5%9B%BE)
 
-[三、什么是RPC](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E4%BB%80%E4%B9%88%E6%98%AFrpc)
+[三、什么是RPC](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E4%B8%89%E4%BB%80%E4%B9%88%E6%98%AFrpc)
 
-[四、PRC基本原理](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#prc%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86)
+[四、PRC基本原理](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E5%9B%9Bprc%E5%9F%BA%E6%9C%AC%E5%8E%9F%E7%90%86)
 
-[五、PRC框架](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#prc%E6%A1%86%E6%9E%B6)
+[五、PRC框架](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E4%BA%94prc%E6%A1%86%E6%9E%B6)
 
-[六、Dubbo简介](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#dubbo%E7%AE%80%E4%BB%8B)
+[六、Dubbo简介](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E5%85%AD-dubbo%E7%AE%80%E4%BB%8B)
 
-[七、Dubbo基本概念](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#dubbo%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
+[七、Dubbo基本概念](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E4%B8%83dubbo%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5)
 
-[八、zookeeper 基本介绍](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#zookeeper-%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D)
+[八、zookeeper 基本介绍](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E5%85%ABzookeeper-%E5%9F%BA%E6%9C%AC%E4%BB%8B%E7%BB%8D)
 
-[九、zookeeper环境搭建(mac)](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#zookeeper%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAmac)
+[九、zookeeper环境搭建(mac)](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E4%B9%9Dzookeeper%E7%8E%AF%E5%A2%83%E6%90%AD%E5%BB%BAmac)
 
-[十、mac安装dubbo-admin管理控制台](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#mac%E5%AE%89%E8%A3%85dubbo-admin%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E5%8F%B0)
+[十、mac安装dubbo-admin管理控制台](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E5%8D%81mac%E5%AE%89%E8%A3%85dubbo-admin%E7%AE%A1%E7%90%86%E6%8E%A7%E5%88%B6%E5%8F%B0)
 
-[十一、dubbo-helloworld](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#dubbo-helloworld)
+[十一、dubbo-helloworld](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E5%8D%81%E4%B8%80dubbo-helloworld)
 
-[十二、Dubbo安装监控中心-Dubbo-Monitor-simple](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#dubbo%E5%AE%89%E8%A3%85%E7%9B%91%E6%8E%A7%E4%B8%AD%E5%BF%83-dubbo-monitor-simple)
+[十二、Dubbo安装监控中心-Dubbo-Monitor-simple](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E5%8D%81%E4%BA%8Cdubbo%E5%AE%89%E8%A3%85%E7%9B%91%E6%8E%A7%E4%B8%AD%E5%BF%83-dubbo-monitor-simple)
 
-[十三、Dubbo与SpringBoot整合](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#dubbo%E4%B8%8Espringboot%E6%95%B4%E5%90%88)
+[十三、Dubbo与SpringBoot整合](https://github.com/xingyuexingyue/sangyu/blob/master/study/Dubbo.md#%E5%8D%81%E4%B8%89dubbo%E4%B8%8Espringboot%E6%95%B4%E5%90%88)
 
 
 ## 一、什么是分布式系统 

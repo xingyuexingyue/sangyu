@@ -1,10 +1,10 @@
 ## 目录 
 
-[一、idea创建spring项目(mac)]()
+[一、idea创建spring项目(mac)](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E4%B8%80idea%E5%88%9B%E5%BB%BAspring%E9%A1%B9%E7%9B%AEmac)
 
-[二、Bean属性注入]()
+[二、Bean属性注入](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E4%BA%8Cbean%E5%B1%9E%E6%80%A7%E6%B3%A8%E5%85%A5)
 
-[三、Spring支持3种依赖注入的方式]()
+[三、Bean 注入参数的类型]()
 
 [四、引用其他的bean]()
 
@@ -170,7 +170,7 @@ public class HelloWorld {
 ```
 
 
-## 四、Bean 注入参数的类型
+## 三、Bean 注入参数的类型
 
 在Spring 的配置文件中，用户可以通过Bean的property元素进行参数注入。使用property，不但可以将String、int等字面值注入到Bean中，还可以将集合、Map等类型的注入到Bean中，此外还可以注入配置文件中其他定义的Bean。
 

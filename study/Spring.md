@@ -4,7 +4,7 @@
 
 [二、Bean属性注入](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E4%BA%8Cbean%E5%B1%9E%E6%80%A7%E6%B3%A8%E5%85%A5)
 
-[三、Bean 注入参数的类型]()
+[三、Bean 注入参数的类型](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E5%9B%9Bbean-%E6%B3%A8%E5%85%A5%E5%8F%82%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B)
 
 [四、引用其他的bean]()
 

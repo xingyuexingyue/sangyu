@@ -6,7 +6,7 @@
 
 [三、Bean 注入参数的类型](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E5%9B%9Bbean-%E6%B3%A8%E5%85%A5%E5%8F%82%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B)
 
-[四、引用其他的bean]()
+[四、引用其他的bean](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E5%9B%9Bbean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D)
 
 [五、bean自动装配]()
 

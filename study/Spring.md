@@ -1685,7 +1685,7 @@ public class JDBCTest {
 
 事务管理用来确保数据的完整性和一致性。事务就是一系列的工作，它们被当做一个单独的工作单元，这些动作要么全部完成，要么全部不起作用。
 
-####事务的四个关键属性（ACID）
+#### 事务的四个关键属性（ACID）
 
 - 原子性：事务是一个原子操作，由一系列动作组成，事务的原子性确保动作要么全部完成要么完全不起作用
 
@@ -1695,7 +1695,7 @@ public class JDBCTest {
 
 - 持续性：也称永久性，指一个事务一旦提交，它对数据库中的数据的改变就应该是永久的，不能回滚。接下来的其它操作或故障不应该对其执行结果有任何影响
 
-####Spring中的事务管理
+#### Spring中的事务管理
 
 Spring在不同的事务管理API之上定义了一个抽象层，Spring既支持编程式事务管理，也支持声明式的事务管理。
 
@@ -1705,7 +1705,7 @@ Spring在不同的事务管理API之上定义了一个抽象层，Spring既支�
 
 Spring的核心事务管理抽象是```org.springframework.transaction.PlatformTransactionManager``` ,这是一个接口，封装了一组独立于技术的方法，无论使用Spring的哪种事务管理策略，事务管理器都是必须的。
 
-####事务管理器的不同实现：
+#### 事务管理器的不同实现：
 
 - ```org.springframework.jdbc.datasource.DataSourceTransactionManager``` : 在应用程序中只需要处理一个数据源，而且通过JDBC存取
 
@@ -1713,7 +1713,7 @@ Spring的核心事务管理抽象是```org.springframework.transaction.PlatformT
 
 事务管理器最终以普通的Bean形式声明在Spring IOC容器中
 
-## 事务的传播行为
+#### 事务的传播行为
 
 当事务方法被另一个事务方法调用时，必须指定事务应该如何传播。例如：方法可能继续在现有事务中运行，也可能开启一个新事务，并在自己的事务中运行
 

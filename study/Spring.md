@@ -4,7 +4,7 @@
 
 [二、Bean属性注入](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E4%BA%8Cbean%E5%B1%9E%E6%80%A7%E6%B3%A8%E5%85%A5)
 
-[三、Bean 注入参数的类型](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E5%9B%9Bbean-%E6%B3%A8%E5%85%A5%E5%8F%82%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B)
+[三、Bean 注入参数的类型](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E4%B8%89bean-%E6%B3%A8%E5%85%A5%E5%8F%82%E6%95%B0%E7%9A%84%E7%B1%BB%E5%9E%8B)
 
 [四、引用其他的bean](https://github.com/xingyuexingyue/sangyu/blob/master/study/Spring.md#%E5%9B%9Bbean%E8%87%AA%E5%8A%A8%E8%A3%85%E9%85%8D)
 
@@ -100,7 +100,7 @@ public class Main {
     }
 }
 ```
-####通过setter方法属性注入Bean
+#### 通过setter方法属性注入Bean
 
 ```
 public class HelloWorld {
@@ -129,7 +129,7 @@ public class HelloWorld {
 </bean> 
 ```
 
-####通过构造方法注入Bean
+#### 通过构造方法注入Bean
 
 ```
 public class HelloWorld {
@@ -2000,8 +2000,8 @@ Spring  IOC容器对Bean的生命周期进行管理的过程：
 
 可以在Bean的声明里设置init-method 和destory-method属性，为Bean指定初始化和销毁方法
 
-
-####创建bean后置处理器
+ 
+#### 创建bean后置处理器
 
 Bean后置处理器允许在调用初始化方法前后对Bean进行额外的处理。对IOC容器里所有的Bean实例逐一处理，而非单一实例，典型的应用是：检查Bean属性的正确性或根据特定的标准更改Bean的属性
 
@@ -2021,7 +2021,7 @@ public interface BeanPostProcessor {
 }
 ```
 
-####添加Bean后置处理器后Bean的生命周期
+#### 添加Bean后置处理器后Bean的生命周期
 
 1）通过构造器或工厂方法创建Bean实例
 2）为Bean的属性设置值和对其他Bean的引用

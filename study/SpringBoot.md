@@ -187,7 +187,7 @@ public class HelloController {
 ![](https://upload-images.jianshu.io/upload_images/2765653-cc7b7950394d4baf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-## YAML
+## 三、YAML
 
 SpringBoot支持使用一个全局的配置配置文件，目录在```src/main/resources或者类路径/config```，全局配置文件可以对一些默认配置值进行修改，配置文件名是固定的：application.properties或application.yml
 
@@ -409,229 +409,7 @@ public class MySpringBoot01ApplicationTests {
 </dependency>
 ```
 
-## 二、YAML
-
-SpringBoot支持使用一个全局的配置配置文件，目录在```src/main/resources或者类路径/config```，全局配置文件可以对一些默认配置值进行修改，配置文件名是固定的：application.properties或application.yml
-
-
-yaml是YAML语言的文件，以数据为中心，比json、xml等更适合做配置文件 [参考官方语法规范](https://yaml.org/)
-
-1、YAML语法
-
-- k:(空格)v：表示一对键值对切中间的空格必须有，不能省略
-- 使用缩进表示层级关系,只要是左对齐的一列数据，都是同一个层级
- ```
-server:
-  port: 8082
-  path: /hello
-```
-- 属性和值大小写敏感
-
-2、值的写法
-
-- 字面量：普通的值（数字、字符串、布尔）
-k: v  字面直接写，字符串默认不用加上单引号或双引号，如果包含" ",表示不会转义字符串内包含的特殊字符，如果包含' '，表示会转义字符串内的特殊字符，特殊字符最终只是一个普通的字符串数据
-- 对象、Map(属性和值)（键值对）
-k: v   在下一行写对象的属性和值的关系；
-```
-friends:
-    lastName: aa
-    age: 20
-// 行内写法
-friends: {lastName:aa,age:20}
-```
-- 数组（List，Set）
-
-```
-// 用- 表示数组中的一个元素
-pets:
-    - cat
-    - dog
-    - pig
-// 行内写法
-pets: [cat,dog,pig]
-```
-
-
-```
-public class Dog {
-    private String name;
-    private Integer age;
-    @Override
-    public String toString() {
-        return "Dog{" +
-                "name='" + name + '\'' +
-                ", age=" + age +
-                '}';
-    }
-    public void setName(String name) {
-        this.name = name;
-    }
-    public String getName() {
-        return name;
-    }
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-    public Integer getAge() {
-        return age;
-    }
-}
-```
-
-```
-import org.springframework.boot.context.properties.ConfigurationProperties;
-import org.springframework.stereotype.Component;
-
-import java.util.Date;
-import java.util.List;
-import java.util.Map;
-
-/**
- * 将配置文件中配置的每一个属性的值，映射到这个组件中
- * @ConfigurationProperties(prefix = "person") 告诉SpringBoot将本类中的所有属性和配置文件中相关的配置进行绑定
- * (prefix = "person") 配置文件文件中哪个下面的所有属性进行一一映射
- */
-@Component
-@ConfigurationProperties(prefix = "person")
-public class Person {
-    private String lastName;
-    private Integer age;
-    private Boolean boss;
-    private Date birth;
-
-    private Map<String,Object> maps;
-    private List<Object> lists;
-    private Dog dog;
-
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
-    }
-
-    public void setAge(Integer age) {
-        this.age = age;
-    }
-
-    public void setBoss(Boolean boss) {
-        this.boss = boss;
-    }
-
-    public void setBirth(Date birth) {
-        this.birth = birth;
-    }
-
-    public void setMaps(Map<String, Object> maps) {
-        this.maps = maps;
-    }
-
-    public void setDog(Dog dog) {
-        this.dog = dog;
-    }
-
-    public void setLists(List<Object> lists) {
-        this.lists = lists;
-    }
-
-    public Integer getAge() {
-        return age;
-    }
-
-    public Date getBirth() {
-        return birth;
-    }
-
-    public String getLastName() {
-        return lastName;
-    }
-
-    public Boolean getBoss() {
-        return boss;
-    }
-
-    public Dog getDog() {
-        return dog;
-    }
-
-    public List<Object> getLists() {
-        return lists;
-    }
-
-    public Map<String, Object> getMaps() {
-        return maps;
-    }
-
-    @Override
-    public String toString() {
-        return "Person{" +
-                "lastName='" + lastName + '\'' +
-                ", age=" + age +
-                ", boss=" + boss +
-                ", birth=" + birth +
-                ", maps=" + maps +
-                ", lists=" + lists +
-                ", dog=" + dog +
-                '}';
-    }
-}
-```
-
-```
-server:
-  port: 8082
-person:
-  last-name: hello
-  age: 18
-  boss: false
-  birth: 2017/12/12
-  maps: {k1: v1,k2: 12}
-  lists:
-    - lisi
-    - zhaoliu
-  dog:
-    name: 狗狗
-    age: 12
-```
-
-```
-import com.sangyu.springboot.bean.Person;
-import org.junit.Test;
-import org.junit.runner.RunWith;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.context.junit4.SpringRunner;
-
-/**
- * Spring 单元测试
- * 可以在测试期间很方便类似编码一样进行自动注入容器等
- */
-@RunWith(SpringRunner.class)
-@SpringBootTest
-public class MySpringBoot01ApplicationTests {
-
-	@Autowired
-	Person person;
-	@Test
-	public void contextLoads() {
-		System.out.println(person);
-	}
-}
-```
-可能会提示一个异常
-
-![](https://upload-images.jianshu.io/upload_images/2765653-4e5edf2c9e309ddf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-如何解决：在pom.xml中注入
-
-```
-<!--导入配置文件处理器，配置文件进行绑定就会有提示-->
-<dependency>
-	<groupId>org.springframework.boot</groupId>
-	<artifactId>spring-boot-configuration-processor</artifactId>
-      <optional>true</optional>
-</dependency>
-```
-
-## 三、@Value和@CongigurationProperties比较
+## 四、@Value和@CongigurationProperties比较
 
 
 |属性|	@CongigurationProperties| @Value|
@@ -711,7 +489,7 @@ public class Person {
 }
 ```
 
-## 四、@Propertysource 、@ImportResource比较
+## 五、@Propertysource 、@ImportResource比较
 
 @CongigurationProperties与@Propertysource结合读取指定配置文件（只能用于properties文件）
 
@@ -790,7 +568,7 @@ public class MySpringBoot01ApplicationTests {
 }
 ```
 
-## 五、配置文件占位符
+## 六、配置文件占位符
 
 1、随机数
 ```
@@ -810,7 +588,7 @@ person.dog.name=${person.hello:hello}_dog
 person.dog.age=15
 ```
 
-## 六、profile 多环境支持
+## 七、profile 多环境支持
 
 1、多Profile文件
 
@@ -873,7 +651,7 @@ java -jar /Users/aaa/spring-test01/my-springboot-demo02/target/my-springboot-dem
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-ebf7f2bc2cc45ec5.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 七、配置文件加载位置
+## 八、配置文件加载位置
 
 spring boot 启动会扫描以下位置的application.properties或者appliation.yml文件作为Spring Boot的默认配置文件，并且优先级按照从高到低的顺序，所有位置的文件都会被加载，高优先级配置内容会覆盖低优先级配置内容：
 
@@ -907,7 +685,7 @@ public class HelloController {
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-a36073fbb84e2cd9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 八、springboot日志默认配置
+## 九、springboot日志默认配置
 
 ```
 # application.properties 中修改日志的输出级别
@@ -999,7 +777,7 @@ logging.pattern.console=%d{yyyy-MM-dd} [%thread] %-5level %logger{50} - %msg%n
 logging.pattern.file=%d{yyyy-MM-dd} === [%thread] === %-5level === %logger{50} ==== %msg%n
 ```
 
-## 九、指定日志配置文件和日志profile功能
+## 十、指定日志配置文件和日志profile功能
 
 在类路径下放每个日志框架自己的配置文件；SpringBoot就不再使用默认配置文件了。但要注意的是：```logback.xml```直接就被日志框架识别了；```logback-spring.xml```日志框架就不直接加载日志但配置项，由SpringBoot解析日志配置，可以使用SpringBoot的高级Profile功能
 
@@ -1107,7 +885,7 @@ server.port=8081
 spring.profiles.active=dev 
 ```
 
-## 十、webjars&静态资源映射规则
+## 十一、webjars&静态资源映射规则
 
 pom.xml 注入资源
 
@@ -1153,7 +931,7 @@ classpath:/public/
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-4bdedc165e46f696.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 十一、引入模板引擎thymeleaf
+## 十二、引入模板引擎thymeleaf
 
 1、pom.xml 注入模板引擎thymeleaf依赖，切换thymeleaf版本为3.0
 
@@ -1259,7 +1037,7 @@ th:fragment 声明片段
 th:remove 声明片段
 ```
 
-## 十二、springboot 2.0 + Redis
+## 十三、springboot 2.0 + Redis
 
 Redis 是一个开源（BSD许可）的，内存中的数据结构存储系统，它可以用作数据库、缓存和消息中间件
 
@@ -1506,7 +1284,7 @@ public class DeptService {
 }
 ```
 
-## 十三、springboot + 消息队列
+## 十四、springboot + 消息队列
 
 消息服务中间件可以提升系统异步通信、扩展解耦能力。
 
@@ -1865,7 +1643,7 @@ public class SpringbootRabbitmqApplication {
 }
 ```
 
-## 十四、springboot 整合 ElasticSearch
+## 十五、springboot 整合 ElasticSearch
 
 ElasticSearch是目前全文搜索引擎的首选，可以快速的存储、搜索和分析数据，并且ES是一个分布式搜索服务，提供Restful API，底层基于Lucene，采用多shard（分片）的方式保证数据安全，并且提供自动resharding的功能，github等大型的站点也是采用了ES作为其搜索服务
 
@@ -2372,7 +2150,7 @@ class MySpringBootEsApplicationTests {
 }
 ```
 
-## 十五、springboot-任务
+## 十六、springboot-任务
 
 使用向导快速创建springboot，其他步骤可参考之前的文章
 

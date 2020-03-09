@@ -1,4 +1,4 @@
-# 目录
+## 目录
 
 [一、idea创建SpringMVC项目](https://github.com/xingyuexingyue/sangyu/blob/master/study/SpringMVC.md#%E4%B8%80idea%E5%88%9B%E5%BB%BAspringmvc%E9%A1%B9%E7%9B%AE)
 

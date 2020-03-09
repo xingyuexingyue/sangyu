@@ -8,7 +8,7 @@
 
 [四、@Value和@CongigurationProperties比较](https://github.com/xingyuexingyue/sangyu/blob/master/study/SpringBoot.md#%E5%9B%9Bvalue%E5%92%8Ccongigurationproperties%E6%AF%94%E8%BE%83)
 
-[五、@Propertysource 、@ImportResource比较](https://github.com/xingyuexingyue/sangyu/blob/master/study/SpringBoot.md#%E4%BA%94propertysource-importresource%E6%AF%94%E8%BE%83)
+[五、@Propertysource和@ImportResource比较](https://github.com/xingyuexingyue/sangyu/blob/master/study/SpringBoot.md#%E4%BA%94propertysource-importresource%E6%AF%94%E8%BE%83)
 
 [六、配置文件占位符](https://github.com/xingyuexingyue/sangyu/blob/master/study/SpringBoot.md#%E5%85%AD%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6%E5%8D%A0%E4%BD%8D%E7%AC%A6)
 
@@ -507,7 +507,7 @@ public class Person {
 }
 ```
 
-## 五、@Propertysource 、@ImportResource比较
+## 五、@Propertysource和@ImportResource比较
 
 @CongigurationProperties与@Propertysource结合读取指定配置文件（只能用于properties文件）
 

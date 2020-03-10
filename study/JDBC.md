@@ -1,34 +1,34 @@
 ## 目录
 
-[一、通过Driver 接口获取数据库连接]()
+[一、通过Driver 接口获取数据库连接](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E4%B8%80%E9%80%9A%E8%BF%87driver-%E6%8E%A5%E5%8F%A3%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5)
 
-[二、通过DriverManager 接口获取数据库连接]()
+[二、通过DriverManager 接口获取数据库连接](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E4%BA%8C%E9%80%9A%E8%BF%87drivermanager-%E6%8E%A5%E5%8F%A3%E8%8E%B7%E5%8F%96%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5)
 
-[三、通过Statement 执行更新操作]()
+[三、通过Statement 执行更新操作](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E4%B8%89%E9%80%9A%E8%BF%87statement-%E6%89%A7%E8%A1%8C%E6%9B%B4%E6%96%B0%E6%93%8D%E4%BD%9C)
 
-[四、通过ResultSet 执行查询操作]()
+[四、通过ResultSet 执行查询操作](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%9B%9B%E9%80%9A%E8%BF%87resultset-%E6%89%A7%E8%A1%8C%E6%9F%A5%E8%AF%A2%E6%93%8D%E4%BD%9C)
 
-[五、通过PreparedStatement 解决SQL注入]()
+[五、通过PreparedStatement 解决SQL注入](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E4%BA%94%E9%80%9A%E8%BF%87preparedstatement-%E8%A7%A3%E5%86%B3sql%E6%B3%A8%E5%85%A5)
 
-[六、DatabaseMetaData类 获得数据库表的相关信息]()
+[六、DatabaseMetaData类 获得数据库表的相关信息](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%85%ADdatabasemetadata%E7%B1%BB-%E8%8E%B7%E5%BE%97%E6%95%B0%E6%8D%AE%E5%BA%93%E8%A1%A8%E7%9A%84%E7%9B%B8%E5%85%B3%E4%BF%A1%E6%81%AF)
 
-[七、利用反射及JDBC 元数据编写通用的查询方法]()
+[七、利用反射及JDBC 元数据编写通用的查询方法](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E4%B8%83%E5%88%A9%E7%94%A8%E5%8F%8D%E5%B0%84%E5%8F%8Ajdbc-%E5%85%83%E6%95%B0%E6%8D%AE%E7%BC%96%E5%86%99%E9%80%9A%E7%94%A8%E7%9A%84%E6%9F%A5%E8%AF%A2%E6%96%B9%E6%B3%95)
 
-[八、使用beanutils 工具类操作JavaBean]()
+[八、使用beanutils 工具类操作JavaBean](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%85%AB%E4%BD%BF%E7%94%A8beanutils-%E5%B7%A5%E5%85%B7%E7%B1%BB%E6%93%8D%E4%BD%9Cjavabean)
 
-[九、获取插入记录的主键值]()
+[九、获取插入记录的主键值](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E4%B9%9D%E8%8E%B7%E5%8F%96%E6%8F%92%E5%85%A5%E8%AE%B0%E5%BD%95%E7%9A%84%E4%B8%BB%E9%94%AE%E5%80%BC)
 
-[十、处理Blob]()
+[十、处理Blob](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%8D%81%E5%A4%84%E7%90%86blob)
 
-[十一、处理事务]()
+[十一、处理事务](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%8D%81%E4%B8%80%E5%A4%84%E7%90%86%E4%BA%8B%E5%8A%A1)
 
-[十二、事务的隔离级别]()
+[十二、事务的隔离级别](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%8D%81%E4%BA%8C%E4%BA%8B%E5%8A%A1%E7%9A%84%E9%9A%94%E7%A6%BB%E7%BA%A7%E5%88%AB)
 
-[十三、 批量处理]()
+[十三、 批量处理](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%8D%81%E4%B8%89-%E6%89%B9%E9%87%8F%E5%A4%84%E7%90%86)
 
-[十四、数据库连接池：DBCP、C3P0]()
+[十四、数据库连接池：DBCP、C3P0](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%8D%81%E5%9B%9B%E6%95%B0%E6%8D%AE%E5%BA%93%E8%BF%9E%E6%8E%A5%E6%B1%A0dbcpc3p0)
 
-[十五、使用DBUtils 查询、更新]()
+[十五、使用DBUtils 查询、更新](https://github.com/xingyuexingyue/sangyu/blob/master/study/JDBC.md#%E5%8D%81%E4%BA%94%E4%BD%BF%E7%94%A8dbutils-%E6%9F%A5%E8%AF%A2%E6%9B%B4%E6%96%B0)
 
 ## 一、通过Driver 接口获取数据库连接
 

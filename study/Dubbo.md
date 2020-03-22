@@ -41,7 +41,7 @@
 
 上图描述了从单一应用架构-->垂直应用架构-->分布式服务架构-->流动计算架构，应用的发展演变过程
 
-**1. 单一应用架构**
+### 1. 单一应用架构
 
 当网站流量很小时，只需一个应用，将所有功能都部署在一起，以减少部署节点和成本。此时，用于简化增删改查工作量的数据访问框架（ORM）是关键
 
@@ -55,7 +55,7 @@
 2. 协同开发问题
 3. 不利于升级维护
 
-**2. 垂直应用架构**
+### 2. 垂直应用架构
 
 当访问量逐渐增大，单一应用增加机器带来的加速度越来越小，将应用拆成互不相干的几个应用，以提升效率，此时，用于加速前端页面开发的Web框架(MVC)是关键。
 
@@ -71,19 +71,17 @@
 
 2.每个应用无法做到完全的独立，比如订单可能要用到用户的信息，每个应用之间有交互的需要
 
-**3. 分布式服务架构**
+### 3. 分布式服务架构
 
 当垂直应用越来越多，应用之间交互不可避免，将核心业务抽取出来，作为独立的服务，逐渐形成稳定的服务中心，使前端应用能更快速的响应多变的市场需求。此时，用于提高业务复用及整合分布式服务框架（RPC）是关键
 
 ![分布式服务架构图](https://upload-images.jianshu.io/upload_images/2765653-c3c94a98d46a2cdd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
-
 分布式服务架构拆分不同的功能业务，并且不同的功能页面又将界面与业务逻辑分离，业务逻辑和界面是部署到不同服务器，不同的服务器之间的服务调用通过RPC(远程过程调用)调用(同一台服务器是简称件通信)
 
 分布式服务架构带来的问题，是如何进行远程过程调用，以及如何拆分业务提升业务的复用程度，通过RPC(分布式服务框架)可以解决远程过程调用，但其他问题是，随着业务拆分越来越多，可能会有成千上万的服务器在运行不同的服务，会出现资源浪费的情况，**是否可以提高资源的利用率，通过访问量来动态分配服务器**
 
-**4. 流动计算架构**
+### 4. 流动计算架构
 
 当服务越来越多，容量的评估，小服务资源的浪费等问题逐渐显现，此时需增加一个调度中心基于访问压力实时管理集群容量，提高集群利用率。此时，用于提高机器利用率的资源调用和治理中心(SOA)是关键
 
@@ -139,29 +137,29 @@ Apache Dubbo是一款高性能、轻量级的开源Java RPC框架，它提供了
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-f2e614957a6e66d0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-**服务提供者(Provider)** :暴露服务的服务提供方，服务提供者在启动时，向注册中心注册自己提供的服务
+> 服务提供者(Provider)：暴露服务的服务提供方，服务提供者在启动时，向注册中心注册自己提供的服务
+> 
+> 服务消费者(Consumer)：调用远程服务的服务消费方，服务消费者在启动时，向注册中心订阅自己所需的服务，服务消费者，从提供者地址列表中，基于软件负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用
+> 
+> 注册中心(Registry)：注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者
+> 
+> 监控中心(Monitor)：服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心
 
-**服务消费者(Consumer)** :调用远程服务的服务消费方，服务消费者在启动时，向注册中心订阅自己所需的服务，服务消费者，从提供者地址列表中，基于软件负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用
+### 调用关系说明：
 
-**注册中心(Registry)** :注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者
+1）服务容器负责启动，加载，运行服务提供者
 
-**监控中心(Monitor)** :服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心
+2）服务提供者在启动时，向注册中心注册自己提供的服务
 
-**调用关系说明**
+3）服务消费者在启动时，向注册中心订阅自己所需的服务
 
-- 服务容器负责启动，加载，运行服务提供者
+4）注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者
 
-- 服务提供者在启动时，向注册中心注册自己提供的服务
+5）服务消费者，从提供者地址列表中，基于软件负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用
 
-- 服务消费者在启动时，向注册中心订阅自己所需的服务
+6）服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心
 
-- 注册中心返回服务提供者地址列表给消费者，如果有变更，注册中心将基于长连接推送变更数据给消费者
-
-- 服务消费者，从提供者地址列表中，基于软件负载均衡算法，选一台提供者进行调用，如果调用失败，再选另一台调用
-
-- 服务消费者和提供者，在内存中累计调用次数和调用时间，定时每分钟发送一次统计数据到监控中心
-
-**注册中心**
+### 注册中心
 
 ![注册中心](https://upload-images.jianshu.io/upload_images/2765653-cfd3258a76ebe6df.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -360,7 +358,7 @@ java -jar dubbo-admin-0.0.1-SNAPSHOT.jar
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-3933a2af5832d8f4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-工程架构
+### 工程架构
 
 1. 分包
 建议将服务接口，服务模型，服务异常等均放在API包中，因为服务模型及异常也是API的一部分，同时，这样做也符合分包原则：重用分布等价原则(REP)，共用重用原则（CRP）-在本例中相当于gmall-interface工程，在gmall-interface工程提供了javabean和service 接口
@@ -372,7 +370,7 @@ java -jar dubbo-admin-0.0.1-SNAPSHOT.jar
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-9f0c48dcd0a8c9cf.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-**创建服务提供者**
+### 创建服务提供者
 
 1. 使用idea 创建一个新的Maven Project 
 
@@ -394,7 +392,6 @@ java -jar dubbo-admin-0.0.1-SNAPSHOT.jar
 
  ![](https://upload-images.jianshu.io/upload_images/2765653-f47e60841a71da66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 6. Module name尽量和第二步ArtifactId加的一样，没问题后Finsh，Module就创建成功了，在提供者的目录下创建具体接口实现
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-b0106097442ecd17.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -403,7 +400,7 @@ java -jar dubbo-admin-0.0.1-SNAPSHOT.jar
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-18803bc3eaef66bd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-**user-service-provider用户模块：对用户接口的实现**
+user-service-provider用户模块：对用户接口的实现
 
 UserServiceImpl：服务方提供实现接口(UserService)
 provider.xml：用 Spring 配置声明暴露服务
@@ -510,7 +507,7 @@ public class MainApplication {
 </beans>
 
 ```
-**创建服务消费者**
+### 创建服务消费者
 
 创建module过程和服务提供者不同，在gmall项目下创建module，并ArtifactId设置为order-service-consumer
 
@@ -636,7 +633,6 @@ public class MainApplication {
 </project>
 
 ```
-**创建公共接口层**
 
 创建module过程和服务提供者不同，在gmall项目下创建module，并ArtifactId设置为gmall-interface，提供javabean和服务接口
 
@@ -731,7 +727,7 @@ public interface OrderService {
 }
 ```
 
-**测试运行**
+## 测试运行
 
 先运行服务提供者user-service-provider，再运行服务调用者order-service-provider，两者运行前要的保证zookeeper是运行状态
 
@@ -800,7 +796,7 @@ dubbo.jetty.port：监控中心web页面的访问端口号
 
 ## 十三、Dubbo与SpringBoot整合
 
-**创建服务的提供者**
+### 创建服务的提供者
 
 1. 还是在gmall下新建module工程
 
@@ -875,7 +871,8 @@ dubbo.protocol.name=dubbo
 dubbo.protocol.port=20880
 dubbo.monitor.protocol=registry
 ```
-**创建服务的消费者**
+
+### 创建服务的消费者
 
 1. 还是在gmall下新建module工程
 

@@ -16,29 +16,7 @@
 
 所以，面向对象允许根据问题来描述问题，而不是根据运行解决方案的计算机来描述问题。
 
-理解面向对象可以把这个对象看作一台微型计算机--这台计算机具有状态、具有操作，用户可以根据这些
-对象执行对应的操作
-
-------
-
-Alan Key曾经总结了第一个成功的面向对象语言，
-
-同时也是Java所基于的语言之一的Smalltalk的五个基本特性，这个特性表现了一种纯碎的面向对象程序设计方式：
-
-**1）万物皆对象**
-
-**2）程序是对象的集合，它们通过发送消息来告知彼此所要做的**
-
-**3）每个对象都有自己的由其他对象所构成的存储。** 换句话说，可以通过创建包含现有对象包的方式来创建新类型
-的对象。因此，可以在程序中构建复杂的的体系，同时将其复杂性隐藏在对象的简单性的背后
-
-**4）每个对象都拥有其类型也就是类，每个class，类和类型相同**
-
-**5）某一特定类型的所有对象都可以接收同样的消息，体现了继承的思想**
-
-------
-
-Booach提出了一个更加简洁的描述：对象具有状态、行为和标识
+理解面向对象可以把这个对象看作一台微型计算机--这台计算机具有状态、具有操作，用户可以根据这些对象执行对应的操作
 
 ## 二、创建对象和方法
 
@@ -61,9 +39,7 @@ public class Light {
 
 > **Java 一切都是对象，但我们操作的标识符实际上是对象的一个引用**
 >
-> 举个例子去理解，我们可以把对象和引用的关系想像成遥控器和电视机，遥控器就是引用，电视机就是对象
-> 只要握住了这个遥控器，就能保持与电视机的链接，当我们想改变频道或者减少音量时，实际操作的是遥控器
-> 再由遥控器来控制电视机。此外，即使没有电视机，遥控器也可以独立存在
+> 举个例子去理解，我们可以把对象和引用的关系想像成遥控器和电视机，遥控器就是引用，电视机就是对象只要握住了这个遥控器，就能保持与电视机的链接，当我们想改变频道或者减少音量时，实际操作的是遥控器再由遥控器来控制电视机。此外，即使没有电视机，遥控器也可以独立存在
 >
 > 也就是说，可以拥有引用，并不一定需要有一个对象与它关联
 
@@ -71,14 +47,13 @@ public class Light {
 
 如果我们想操作 Light ，可以创建一个Light的引用：`Light light`
 
-通过这种方式创建的只是引用并不是对象。如果调用Light的方法，会返回一个运行时操作，因为此时light
-并没有与任何事物相关联，因此，一种安全的做法是：创建一个引用同时便初始化
+通过这种方式创建的只是引用并不是对象。如果调用Light的方法，会返回一个运行时操作，因为此时light并没有与任何事物相关联，因此，一种安全的做法是：创建一个引用同时便初始化(就是创建对象)
 
 `Light light = new Light();`
 
 > 创建对象必须采用new 
 >
-> 如果是字符串的话有两种方式：  
+> 有特殊情况，如果是字符串的话有两种方式：  
 > 1）可以用带引号的文本初始化 `String s = "asdf"`   
 > 2）也可以String s = new String("asdf");  
 
@@ -93,7 +68,7 @@ public class Test{
     public static void main(String[] args){
         Light light = new Light();
         // 2、调用这个对象的方法
-        // 用引用来操纵对象
+        // 要用引用来操纵对象（就是调用对象的字段和方法）
         light.on(); 
         light.off();
     }
@@ -105,6 +80,7 @@ public class Test{
 > Java的方法决定了一个对象能够接收什么样的消息。
 >
 > 方法的基本组成部分包括：方法名、参数列表、返回值和方法体
+>
 > `ReturnType methodName(/* Argument list */){
       /*Method body*/
     }` 
@@ -117,32 +93,30 @@ public class Test{
 >
 > Java中的方法只能作为类的一部分来创建，方法只有通过对象才能被调用
 
-
 Java中的方法只能作为类的一部分来创建，方法只有通过对象才能被调用。且这个对象必须能执行这个方法调用。如果试图在某个对象上调用它并不具备的方法，那么在编译时就会得到一条错误信息
-
 
 ```java
 public class Light {
-    // 代码块...
     /**
-    * 2、给Light类添加方法：如打开、关闭
+    * 2、给Light类添加方法：on()，off()
+    * 没有返回值的方法
+    * 使用void
     */
     public void on(){
         // 代码块
     }
-    // 没有返回值的方法
-    // 使用void
+    // 创建带有参数列表的方法
     public void off(String s1,String s2,String s3){
-            // 代码块
+        // 代码块
     }
 }
 ```
 
 ### 2.4 调用带有参数列表方法
 
-方法的参数列表指定要传递给方法什么样的消息。参数列表中必须指定每个传递对象类型及名字，像
-Java这种任何传递对象的场合一样，这里传递的实际上也是引用，并且引用的类型必须正确。如果
-参数被设为String类型，则必须传递一个String对象；否则，编译器会报错
+> 方法的参数列表指定要传递给方法什么样的消息。
+
+参数列表中必须指定每个传递对象类型及名字，像Java这种任何传递对象的场合一样，这里传递的实际上也是引用，并且引用的类型必须正确。如果参数被设为String类型，则必须传递一个String对象；否则，编译器会报错
 
 ```java
 
@@ -161,27 +135,26 @@ public class Test{
 
 ### 2.5 调用带有返回值的方法
 
-> return关键字，包含两方面：首先表示"已经处理完，离开当前方法"。其次，如果此方法产生了
-一个值，这个值要放在return关键字后面。 
+> return关键字，包含两方面：
+>
+> 1）首先，表示"已经处理完，离开当前方法"。
+>
+> 2）其次，如果此方法产生了一个值，这个值要放在return关键字后面。 
 > 
-> 如果返回类型是void，return关键字的作用只是用来退出方法，并且没有必要到方法结束时才离开
->，可以在任何地方返回
-
+> 如果返回类型是void，return关键字的作用只是用来退出方法，并且没有必要到方法结束时才离开，可以在任何地方返回
 
 ```java
 
-public class Light {
-    // 代码块...
-    /**
-    * 2、给Light类添加方法：如打开、关闭
-    */
+/**
+* 创建包含返回值和不包含返回值的方法
+*/
+public class Light {   
     public void on(){
         // 代码块
     }
     // 没有返回值的方法
     // 使用void
     public void off(String s1,String s2,String s3){
-            // 代码块
     }
     // 有返回值的方法
     // 使用返回类型，数据类型或引用类型
@@ -193,6 +166,7 @@ public class Light {
 public class Test{
     public static void main(String[] args){ 
         Light light = new Light();
+        // 要使用返回值类型的时候
         // 返回值的类型必须与x的类型兼容
         int x = light.time();
         light.off(s1,s2,s3);
@@ -247,48 +221,57 @@ public class Test{
 
 ### 2.7 基本成员默认值
 
-> 若类的某个成员是基本数据类型，即使没有进行初始化，Java也会确保它获取一个默认值，
-> 只有当变量作为类的成员使用时，Java才确保给定其默认值，
-> 以确保哪些是基本类型的成员变量得到初始化，防止产生程序错误。
-> 如果是局部变量，Java不会给默认值，如果在初始化时没有赋值，编译时会报错
+> 若类的某个成员是基本数据类型，即使没有进行初始化，Java也会确保它获取一个默认值，只有当变量作为类的成员使用时，Java才确保给定其默认值，以确保哪些是基本类型的成员变量得到初始化，防止产生程序错误。
+> 
+> 但是要注意的是，如果是局部变量，Java不会给默认值，如果在初始化时没有赋值，编译时会报错
 
 
 ### 2.8 static关键字
 
 > 当声明一个方法或变量为使用static关键字时，就意味着这个域或方法不会与包含它的那个类的任何对象实例关联在一起。
+>
 > 所以，即使没有创建某个类的任何对象，也可以调用其static方法或访问其static域
 
 ```java
 class StaticTest{
+    // 创建static域
     static int i = 47;
+    // 创建static方法
     static void test(){
         // 代码块
     }
     public static void main(String[] args){
-        //  一种方式，不需要创建类的对象，直接访问
-        int a = StaticTest.i;
-        // 另一种方式，可以创建类的对象，然后通过引用去访问
+        // 访问静态域和方法的两种方式：
+        // 1、一种方式，不需要创建类的对象，直接访问
+        int a = StaticTest.i
+        // 2、另一种方式，可以创建类的对象，然后通过引用去访问
         // 需要注意的是，就算创建多个对象，所有对象都共享同一个i
         StaticTest staticTest1 = new StaticTest();
         StaticTest staticTest2 = new StaticTest();
         int b = staticTest1.i;
         int c = staticTest1.i;
+        // 调用静态方法
+        StaticTest.test();
+        b.test();
+        c.test();
     }
 }
 ```
 
-### 2.9 构件一个Java 程序
+对于static方法还要注意的是：
+
+> static 方法（静态方法）就是没有this的方法。在static方法的内部不能调用非静态方法，反过来是可以的。
+> 而且可以在没有创建任何对象的前提下，仅仅通过类本身来调用static方法。
+
+### 2.9 一个完整的程序
 
 > 构件一个Java程序，会包含几个部分：
 > 
-> 定义包名：为了给一个类库生成不会与其他名字混淆的名字，Java包名采用反转域名来定义，
-> 整个包名使用小写，句点用来代表子目录的划分：`com.packagename.utility`
+> 定义包名：为了给一个类库生成不会与其他名字混淆的名字，Java包名采用反转域名来定义，整个包名使用小写，句点用来代表子目录的划分：`com.packagename.utility`
 >
-> 使用其他类库：import指示编译器导入一个包，也就是一个类库：`import java.util.ArrayList`
-> 这行代码告诉编译器，想要使用Java的ArrayList类。
-> 并且可以使用通配符"*" 来省略，从而使用util中所有的类 `import java.util.*`
-
-#### 一个完整的程序
+> 使用其他类库：import指示编译器导入一个包（也就是一个类库）：`import java.util.ArrayList`
+> 
+> 这行代码告诉编译器，想要使用Java的ArrayList类，并且可以使用通配符"*" 来省略，从而使用util中所有的类 `import java.util.*`
 
 ```java
 package com.packagename.utility;
@@ -298,7 +281,7 @@ public class ShowProperties{
     }
 }
 ```
-#### 程序的编译与运行
+### 2.10 程序的编译与运行
 
 > 要编译、运行这个程序，首先必须要有一个Java开发环境。安装好的JDK后需要设置classpath，以确保
 > 计算机能找到javac和java这两个文件
@@ -312,7 +295,7 @@ public class ShowProperties{
 ![](https://upload-images.jianshu.io/upload_images/2765653-e73b5bf7d9176f00.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-#### JVM、JRE、JDK三者之间的关系
+### 2.11 JVM、JRE、JDK三者之间的关系
 
 > Java通过JVM虚拟机与平台交互，JRE包含JVM
 > 
@@ -322,7 +305,7 @@ public class ShowProperties{
 >
 > JDK：包含JRE，以及增加编译器和调试器等用于程序开发的文件。开发Java程序
 
-### 2.10 包
+### 2.12 包
 
 > 包内包含一组类，它们在单一的名字空间之下被组织在了一起。
   
@@ -388,12 +371,12 @@ public class QualifiedMyClass{
 }
 ```
 
-### 2.11 创建独一无二的包名
+### 2.13 创建独一无二的包名
 
 包可以由许多.class文件构成。怎样创建独一无二的名称以及怎样查找有可能隐藏于目录中某处的类。这是通过将.class文件所在的路径位置编码成package的名称来实现的。按照管理，package名称的第一部分是类的创建者的反顺序的Internet域名，第二部分是把package名称分解为你机器上的一个目录。所以当Java程序运行并且需要加载.class文件的时候，它就可以确定.class文件在目录上所处的位置
 
 
-### 2.12 冲突
+### 2.14 冲突
 
 如果将两个含有相同名称的类库以 * 的形式同时导入？
 
@@ -414,7 +397,7 @@ java.util.Vector v = new java.util.Vector();
 
 ## 三、理解对象
 
-> 我们介绍如何创建类和对象。类提供了一个模版，然后基于类的模版创建不同的对象。
+> 我们介绍如何创建类和对象。其实类提供了一个模版，然后基于类的模版创建不同的对象。
 > 
 > 当我们在开发或理解一个程序设计时，最好的方法之一就是将对象想象为"服务的提供者"，
 > 对于用户来说，程序本身就是向用户提供服务，对于程序来说，它是通过调用不同的对象提供的服务来
@@ -447,7 +430,7 @@ java.util.Vector v = new java.util.Vector();
 | ++|  自增| 操作数的值增加1|b++;或++b; // b:21 |
 |-- | 自减 | 操作数的值减少1|b--;或--b; // b=19 |
 
-### 4.2 优先级 
+### 4.2 运算优先级 
 
 当一个表达式中存在多个操作符时，操作符的优先级就决定了各部分的计算顺序。Java对计算顺序做了特别的规定。其中，最简单的规则就是先乘除后加减。因为有时会忘记其他优先级规则，所以应该用括号明确规定规定计算顺序
 
@@ -465,19 +448,13 @@ public class Precedence{
 
 ### 4.4 赋值运算符
 
-> - 赋值使用操作符 "=" 。它的含义是：将等号右边的值赋值给等号左边的值
-> 
-> - 右边的值可以是任何常数、变量或者表达式（表达式只要它能生成一个值就行）
+> 赋值操作符 "=" ，它的含义是：将等号右边的值赋值给等号左边的值：  
+> 1）右边的值可以是任何常数、变量或者表达式（表达式只要它能生成一个值就行）  
+> 2）左边的值必须是一个明确的，已命名的变量。这句话是说我们在声明一个变量的变量，必须声明变量的类型，比如`int i` ,int就是变量的类型
 >
-> - 左边的值必须是一个明确的，已命名的变量。这句话是说我们在声明一个变量的变量，必须声明变量的类型
-> ，比如`int i` ,int就是变量的类型
+> 基本数据类型存储了实际的数值，而非指向一个对象的引用，所以在为其复制的时候，是直接将一个地方的内容复制了另一个地方。对基本数据类型使用a=b，那么b的内容就复制给a。若接着又修改了a，此时b根本不会受这种修改的影响
 >
-> - *基本数据类型存储了实际的数值，而非指向一个对象的引用，所以在为其复制的时候，是直接将一个地方的内容
->复制了另一个地方。对基本数据类型使用a=b，那么b的内容就复制给a。若接着又修改了a，此时b根本不会受这种修改的影响
->
-> - *但对象赋值的时候，要记住的是我们在对一个对象进行操作时，我们真正操作的是对对象的引用。
-> 假使将一个对象赋值给另一个对象，实际是将引用从一个地方复制到另一个地方。这意味着假使对象使用c=d，那么c和d都指向的
-> 是原本只有d指向的那个对象，此时我们通过b或c来修改原来的对象，b和c调用那个对象返回的值都是最新的。
+> 但对象赋值的时候，要记住的是我们在对一个对象进行操作时，我们真正操作的是对对象的引用。假使将一个对象赋值给另一个对象，实际是将引用从一个地方复制到另一个地方。这意味着假使对象使用c=d，那么c和d都指向的是原本只有d指向的那个对象，此时我们通过b或c来修改原来的对象，b和c调用那个对象返回的值都是最新的。
 
 ```java
 class tank{
@@ -503,12 +480,9 @@ public class Assignment{
 // 3: t1.level: 27,t2.level: 27
 ```
 
-分析：Tank类非常简单，它的两个实例（t1和t2）是在main()方法里创建。对每个Tank类对象都level域
-都赋予了一个不同的值，然后将t2复制赋值给了t1，由于赋值操作的是一个对象的引用，所以修改t1的同时也改变了t2。
-这就是因为t1和t2包含的都是相同的引用，他们指向相同的对象。
+分析：Tank类非常简单，它的两个实例（t1和t2）是在main()方法里创建。对每个Tank类对象都level域都赋予了一个不同的值，然后将t2复制赋值给了t1，由于赋值操作的是一个对象的引用，所以修改t1的同时也改变了t2。这就是因为t1和t2包含的都是相同的引用，他们指向相同的对象。
 
-原本t1包含的对象的引用，是指向一个值为9的对象。在t1赋值的时候，这个引用被覆盖，也就是丢失了；
-而那个不再被引用的对象会由"垃圾回收器"自动清理了
+原本t1包含的对象的引用，是指向一个值为9的对象。在t1赋值的时候，这个引用被覆盖，也就是丢失了；而那个不再被引用的对象会由"垃圾回收器"自动清理了
 
 这种特殊的现象通常称作"别名现象"，是Java操作对象的一种基本方式。在上面的例子中，如果想避免别名问题应该怎么办呢？可以这些写：
 
@@ -516,8 +490,7 @@ public class Assignment{
 t1.level = t2.level;
 ```
 
-这样便可以保持两个对象彼此独立，而不是将t1和t2绑定相同的对象。但直接操作对象内的域容易导致混乱，并且
-违背了良好的面向对象程序设计的原则。
+这样便可以保持两个对象彼此独立，而不是将t1和t2绑定相同的对象。但直接操作对象内的域容易导致混乱，并且违背了良好的面向对象程序设计的原则。
 
 ### 4.5 方法调用中的别名问题
 
@@ -549,7 +522,7 @@ public class PassObject{
 
 ### 4.6 一元加、减操作符
 
-一元减号用于转变数据的符号而一元加号(+)只是为了与一元减号(-)相对应，但是它位于的作用仅仅是将较小类型的操作数提升为int（（byte，short，char转型为int）
+一元减号用于转变数据的符号而一元加号(+)只是为了与一元减号(-)相对应，但是它位于的作用仅仅是将较小类型的操作数提升为int（byte，short，char转型为int）
 
 ```
 x = a * -b; // 编译器能正确识别
@@ -986,7 +959,6 @@ public class Chess extends BoardGame{
 }
 ```
 
-
 最后，还要注意的是，当创建一个类时，总是在继承，因此，除了已明确指出要从其他类中继承，否则就是在隐式地从Java的标准
 根类Object进行继承
 
@@ -1391,15 +1363,11 @@ j =  39
 */
 ```
 
-在Bettle类上运行Java时，所发生的第一件事情就是访问Bettle.main()（一个static），于是加载器开始启动并找出Bettle类的编译代码
-（在名为Bettle.class的文件之中）。在对它进行加载的过程中，编译器注意到它有一个父类（通过由关键字extends得知的），于是它继承进行加载。不管你是否
-打算产生一个父类的对象，这都要发生。
+在Bettle类上运行Java时，所发生的第一件事情就是访问Bettle.main()（一个static），于是加载器开始启动并找出Bettle类的编译代码（在名为Bettle.class的文件之中）。在对它进行加载的过程中，编译器注意到它有一个父类（通过由关键字extends得知的），于是它继承进行加载。不管你是否打算产生一个父类的对象，这都要发生。
 
 如果该父类还有其自身的父类，那么第二个父类就会被加载，如此类推。接下来，根父类中的static初始化（Insect类）即会被执行，然后是下一个子类，以此类推。这种方式很重要，因此子类的static初始化可能会依赖于父类成员能否被正确初始化
 
-至此为止所有的类都加载完毕，对象就可以创建了。首先，对象中所有的基本类型都会被设为默认值，对象
-引用被设为null--这是通过将对象内存设为二进制而一句生成的。然后，父类的构造器会被调用。在生疏例子中，它是被自动调用的。
-但也可以用super来指定对父类类构造器的调用。
+至此为止所有的类都加载完毕，对象就可以创建了。首先，对象中所有的基本类型都会被设为默认值，对象引用被设为null--这是通过将对象内存设为二进制而一句生成的。然后，父类的构造器会被调用。在生疏例子中，它是被自动调用的。但也可以用super来指定对父类类构造器的调用。
 
 ## 十、多态
 
@@ -1411,10 +1379,9 @@ j =  39
 >
 > 多态的作用是消除类型之间的耦合关系。
 >
-> 继承允许将对象视为它自己本身的类型或其父类型来加以处理。
-> 允许将多种类型（从同一父类继承的）视为同一类型来处理。
-> 多态方法调用允许一种类型表现出与其他相似类型之间的区别，只要它们都是从同一父类继承而来的。
-> 这种区别是根据方法行为的不同而表现出来的，虽然这些方法都可以通过同一父类来调用
+> 继承允许将对象视为它自己本身的类型或其父类型来加以处理。允许将多种类型（从同一父类继承的）视为同一类型来处理。
+>
+> 多态方法调用允许一种类型表现出与其他相似类型之间的区别，只要它们都是从同一父类继承而来的。这种区别是根据方法行为的不同而表现出来的，虽然这些方法都可以通过同一父类来调用
 
 ### 10.1 再论向上转型
 
@@ -1744,8 +1711,7 @@ public class PloyConstructors {
 }
 ```
 
-在上面的例子中，Glyph.draw()方法设计为被覆盖，这种覆盖是在RoundGlyph发生的。但是Glyph构造器会调用这个方法，结果导致了对
-RoundGlyph.draw()的调用。但是从输出结果看，此时radius不是默认初始值1，而是0
+在上面的例子中，Glyph.draw()方法设计为被覆盖，这种覆盖是在RoundGlyph发生的。但是Glyph构造器会调用这个方法，结果导致了对RoundGlyph.draw()的调用。但是从输出结果看，此时radius不是默认初始值1，而是0
 
 所以，初始化的实际过程是：
 
@@ -1936,8 +1902,7 @@ public class Test{
 >
 > 在单根继承结构中的所有对象都具有一个共有接口，所以它们归根到底都是相同的基本类型。
 > 
-> 单根继承结构保证所有的对象都具有某些功能。所有对象都可以很容易地在堆上创建，而参数传递也得到了
-> 极大的简化；并且使垃圾回收器变得容易得多（垃圾回收器正是Java相对C++的重要改进之一） 
+> 单根继承结构保证所有的对象都具有某些功能。所有对象都可以很容易地在堆上创建，而参数传递也得到了极大的简化；并且使垃圾回收器变得容易得多（垃圾回收器正是Java相对C++的重要改进之一） 
 
 ## 十三、容器
 
@@ -2013,8 +1978,7 @@ public class ApplesAndOrangesWithGenerics {
 
 这里要用到向下转型为更具体的类型，这种转型方式是向下转型。我们知道，向上转型是安全的，然而向下转型是不安全的，如果向下转型为错误的类型，就会得到被称为异常的运行时错误。
 
-> 创建容器时，就确定要容器要保存的对象的类型，从而不需要向下转型以及消除犯错误的可能。这种解决方案被称为参数化类型机制。一对尖括号，中间包含类型信息，通过这些特征就可以识别对泛型的使用
-> `ArrayList<Shape> shapes = new ArrayList<Shape>();`
+> 创建容器时，就确定要容器要保存的对象的类型，从而不需要向下转型以及消除犯错误的可能。这种解决方案被称为参数化类型机制。一对尖括号，中间包含类型信息，通过这些特征就可以识别对泛型的使用：`ArrayList<Shape> shapes = new ArrayList<Shape>();`
 
 现在，编译器可以组织你将Orange放置到apples中，因此它变成了一个编译期错误，而不再是运行时错误。
 
@@ -2050,17 +2014,17 @@ public class GenericsAndUpcasting {
 }
 ```
 
-因此，可以将Apple的子类型添加到被指定保存Apple对象的容器中。
-程序的输出是从Object默认的toString()方法产生的，该方法将打印类名，后面跟随者该对象的散列码的无符号十六进制表示（这个散列码是通过hashCode()方法产生的）
+因此，可以将Apple的子类型添加到被指定保存Apple对象的容器中。程序的输出是从Object默认的toString()方法产生的，该方法将打印类名，后面跟随者该对象的散列码的无符号十六进制表示（这个散列码是通过hashCode()方法产生的）
 
 ### 14.1 基本概念
 
 Java容器类类库的用途是“保存对象”，并将其划分两个不同的概念：
+
 1）Collection。一个独立元素的序列，这些元素都服从一条或多条规则。List必须按照插入的顺序保存元素，而Set不能有重复元素。Queue按照排队规则来确定对象产生的顺序（通常于它们被插入的顺序相同）
+
 2）Map。一组成对的“键值对”对象，允许你使用键来查找值。ArrayList允许你使用数字来查找值，因此在某种意义上讲，它将数字与对象关联在了一起。Map允许我们使用另一个对象来查找某个对象
 
-可以像下面这样创建一个list，通过使用接口的方式并在创建的时候指定精确类型，此时ArrayList已经被向上转型为List
-List<Apple> apples = new ArrayList<>();
+可以像下面这样创建一个list，通过使用接口的方式并在创建的时候指定精确类型，此时ArrayList已经被向上转型为List：```List<Apple> apples = new ArrayList<>();```
 
 因为某些类具有额外的功能，例如，LinkedList具有在List接口中未包含的额外方法，而TreeMap也具有在Map接口中未包含的方法，如果你需要使用这些方法，就不能将它们向上转型为更通用的接口
 
@@ -3410,12 +3374,6 @@ class Flower{
 // default constructor(no args)
 // petalCount = 47s = hi
 ```
-
-## 二十二、static 含义
-
-> static 方法（静态方法）就是没有this的方法。在static方法的内部不能调用非静态方法，反过来是可以的。
-> 而且可以在没有创建任何对象的前提下，仅仅通过类本身来调用static方法。
-
 ## 二十三、成员初始化
 
 > Java 尽力保证：所有变量在使用前都能得到恰当的初始化。对于方法的局部变量，必须在使用时为变量赋一个默认值，
@@ -3644,7 +3602,7 @@ class StaticInitialization{
 
 6）执行构造器
 
-## 二十七、显示的静态初始化
+## 二十七、静态子句
    
 > Java允许将多个静态初始化组织成一个特殊“静态子句”（有时也叫做“静态块”）
 > 
@@ -5631,5 +5589,336 @@ public class ShowMethods {
 ```
 getMethods()和getConstructors()方法分别返回Method对象的数组和Constructor对象的数组。
 
+##  三十九、并发
 
+### 39.1 了解并发
+
+在上面的一些程序中，我们看到的都是顺序编程的知识，就是程序中的所有事物在任意时刻都只能执行一个步骤。然后，对于某些问题，如果能够并发地执行程序中的多个部分，则会变得非常方便甚至非常必要。
+
+如果你有一台多处理器的机器，那么就可以在这些处理器之间分布多个任务，从而极大地提高吞吐量。这是使用强有力的多处理器web服务器的常见情况。再为每个请求分配一个线程中，它可以将大量的用户请求分布到多个CPU上。
+
+但是，并发通常是提高运行在单处理器上的程序的性能。这是因为在但处理器上运行的并发程序开销确实比该程序的所有部分都顺序执行的开销大，因为其中增加了所谓上下文切换的代价（从一个任务切换到另一个任务）。表面上看，程序的所有部分当作单个的任务运行好像是开销更小一点，并且可以节省上下文切换的代价。
+
+但还存一个问题就是阻塞。如果程序中的某个任务因为该程序控制范围之外的某些条件（通常是I/O）而导致不能继续执行，那么我就说这个任务或线程阻塞了。如果么有并发，则整个程序都将停止下来，直到外部条件发生变化。
+
+所以，如果用并发来编写程序，那么当一个任务阻塞时，程序中的其他任务还可以继续执行，因此这个程序可以保持继续向前执行。
+
+事实上，从性能的角度看，如果没有任务会阻塞，那么在单处理器机器上使用并发就没有任何意义。
+
+
+实现并发最直接的方式是在操作系统级别使用进程。进程是运行在它自己的地址空间内的自包容的程序。多任务操作系统可以通过周期性地将CPU从一个进程切换到另一个进程，来实现同时运行多个进程。尽管这使得每个进程看起来在其执行过程中都是歇歇停停。进程总是很吸引人，因为操作系统通常会将进程互相个离开，因此它们不会彼此干涉，这使得进程编程相对容易一些。但进程通常会有数量和开销的限制，以避免它们在不同的并发系统之间的可应用性
+
+与此相反的是，像Java所使用的是这种并发系统会共享诸如内存和I/O这样的资源，因此编写多线程程序最基本的困难在于协调不同线程驱动的任务之间对这些资源的使用，以使得这些资源不会同时被多个任务访问。
+
+Java采取了更加传统的方法，在顺序型语言的基础上提供对线程得到支持。在多任务操作系统中分叉外部进程不同，线程机制是在由执行程序表示的单一进程中创建任务。
+
+> 上面的内容中，我们了解了为什么要使用并发，以及要介绍了使用多进程开发和多线程开发这两种方法的不同。在Java开发中一般会使用多线程的方式
+>
+> 但是我们还要注意的是几点是：  
+> 1）在单CPU上使用多任务的程序在任意时刻仍旧只在执行一项工作，因此从理论上讲，肯定可以不用为任何任务编写相同的程序  
+> 2）Java的线程机制都提供时间片，使得每个线程都会分配到数量合理的时间去驱动它的任务。  
+
+### 39.2 基本的线程机制
+
+> 并发编程使我们可以将程序划分为多个分离的、独立运行的任务。通常使用多线程机制，这些独立任务（也被称为子任务）中的每个都将由执行线程来驱动。
+> 
+> 一个线程就是在进程中的一个单一的顺序控制流，因此，单个进程可以拥有多个并发执行的任务，但是你的程序使得每个任务都好像有其自己的CPU一样。其底层机制是切分CPU时间，但通常你不需要考虑它
+> 
+> 线程模型为编程带来了便利，它简化了在单一程序中同时交织在一起的多个操作的处理。在使用线程时CPU将轮流给每个任务分配其占用时间。每个任务都觉得自己在一直占用CPU，但事实上CPU时间是划分称片段分配给了所有的任务（例外情况下程序确实运行在多个CPU之上）
+>
+> 线程的一大好处是可以使你从这个层次抽身出来，即代码不必直到它是运行在具有一个还是多个CPU的机器上。所以，使用线程机制是一种建立透明的、可扩展的程序的方法。如果程序运行得太慢，为机器增添一个CPU就能很容易地加快程序的运行速度。多任务和多线程往往是使用多处理器系统的最合理方式
+
+
+### 39.3 使用Runnable接口创建任务
+
+> 线程可以驱动任务，因此需要一种描述任务的方式，可以有Runnable接口来提供
+>
+> 要想定义任务，只需实现Runnable接口并编写run()方法
+>
+> Thread.yield(); 将CPU从一个线程转移给另一个线程。它的声明表示：线程已经执行完生命周期中最重要的部分了，此刻正式切换给其他任务执行一段时间的大好实际。
+
+```java
+public class LiftOff implements Runnable{
+    private int countDown = 10;
+    private static int taskCount = 0;
+    private final int id = taskCount++;
+    
+    public LiftOff(){}
+    
+    public liftOff(int countDown){
+        this.countDown = countDown;
+    }
+    public String status(){
+        return "#" + id + "(" + (countDown > 0 ? countDown : "LiftOff!") + ")";
+    }   
+    
+    // 实现run方法
+    // 设定跳出循环的条件，停止run()方法
+    public void run(){ 
+        while(countDown >= 0){
+            Sytemt.out.println(status());
+            countDown--;
+            Thread.yield(); 
+        }
+    }   
+}
+```
+
+> run()方法在main()方法中调用（普通方法的调用，并非线程的启动）。（注意，main()也是一个线程）
+
+```java
+public class MainThread{
+    public static void main(String[] args){
+        LiftOff liftOff = new LiftOff();
+        liftOff.run();
+    }
+
+}
+```
+
+> 使用Tread来驱动LiftOff对象，启动任务
+>
+> Thread构造器只需要一个Runnable对象。调用Thread对象的start()方法为该线程执行必需的初始化操作，启动新的线程并自动调用run()方法。并且启动新的线程后，并不影响main()线程的执行。因此启动新的线程后，main()机组执行。
+
+```java
+public class BasicThreads{
+    public static void main(String[] args){
+        Thread t = new Thread(new LiftOff());
+        t.start();
+        System.out.println("Waitting for LiftOff");
+    }
+}
+```
+
+> 启动更多的线程去驱动更多的任务
+> 
+> 这里要了解下：每个Thread都注册了自己，因为确实有一个对它的引用，而且在它的任务退出其run()并死亡之前，垃圾回收器无法清除它。因此一个线程会创建一个单独的执行线程，在对start()的调用完成止呕胡，它仍旧会继续存在
+
+```java
+public class BasicThreads{
+    public static void main(String[] args){
+        for(int i = 0; i < 5;i++){
+            new Thread(new LiftOff()).start();
+        }
+        System.out.println("Waitting for LiftOff");
+    }
+}
+```
+
+### 39.4 使用Exeutor
+
+> JavaSE5的java.util.concurrent包中的执行器（Exeutor）将为你管理Thread对象。从而简化了并发编程。
+>
+> Exeutor为客户端和任务执行之间提供了一个间接层（这里的客户端指的是直接启动线程），与客户端直接执行任务不同，这个中介对象将执行任务
+>
+> Exeutor允许你管理异步任务的执行，而无须显示地管理线程的生命周期。Exeutor在JavaSE5/6中是启动任务的优先方法
+
+使用Exeutor来替代显示的创建Thread对象。ExeutorService（具有服务生命周期的Exeutor。例如关闭）知道如何创建恰当的上下文来执行Runnable对象。
+
+注意，ExeutorService对象是使用Exeutor方法创建的
+
+```java
+public class CachedThreadPool{
+    public static void main(String[] args){
+        ExeutorService exec = Exeutors.newCachedThreadPool();
+        for(int i = 0; i < 5; i++){
+            exec.execute(new LiftOff());
+        }
+        exec.shutdown();
+    }
+}
+```
+
+在上面的例子中，我们通过Exeutors创建ExeutorService，并通过execute来创建和管理系统中的所有的任务
+
+对shutdown()方法的调用可以防止新任务被提交给Exeutor，在main()线程启动后，将运行提交的所有任务，在调用shutdown()之前
+
+> 下面我们将newCachedThreadPool替换为newFixedThreadPool，使用有限的线程集来执行所提交的任务
+
+```java
+public class CachedThreadPool{
+    public static void main(String[] args){
+        ExeutorService exec = Exeutors.newFixedThreadPool(5);
+        for(int i = 0; i < 5; i++){
+            exec.execute(new LiftOff());
+        }
+        exec.shutdown();
+    }
+}
+```
+
+在上面的例子中，我们通过使用newFixedThreadPool一次性预先执行代价高昂的线程分配，因为也就可以限制线程的数量了。这样可以节省时间，因为你不用为每个任务都固定得付出创建线程的开销
+
+要注意：在任何线程池中，现有线程在可能的情况下，都会被自动复用
+
+> 继续了解下singleThreadExecutor 就像是线程数量为1的newFixedThreadPool。这对于如果希望在另一个线程中连续运行的事物来说，都是很有用的，例如更新本地或远程日志的小任务。
+
+> 如果向singleThreadExecutor提交了多个任务，那么这些任务将排队，每个任务都会在下一个任务开始之前运行结果，所有的任务将使用相同的线程。
+>
+> 因此向singleThreadExecutor会序列化所有提交给它的任务，并会维护它自己（隐藏）的悬挂任务队列
+
+```java
+public class SingleThreadExecutor{
+
+    public static void main(String[] args){
+        ExeutorService exec = Exeutors.newSingleThreadExecutor();
+        for(int i= 0; i < 5;i++){
+            exec.execute(new LiftOff());
+        }
+         exec.shutdown();
+    }   
+}
+```
+
+### 39.5 从任务中产生返回值
+
+> Runnable是执行工作的独立任务，但是它不返回任何值，如果你希望任务在完成时能够返回一个值，那么可以实现Callable接口而不是Runnable接口。
+>
+> 在JavaSE5中引入Callable是一种具有类型参数的泛型，它的类型参数表示的是从方法call()（而不是run(）中返回的值，并且必须使用ExcutorService.submit()方法调用它
+
+```java
+class TaskWithResult implements Callable<String>{
+    private int id;
+    public TaskWithResult(int id){
+        this.id = id;
+    }
+    public String call(){
+        return "Result od TaskWithResult " + id;
+    }
+}
+
+public class CallableDemo{
+    public static void main(String[] args){
+        ExeutorService exec = Exeutors.newCachedThreadPool();
+        ArrayList<Future<String>> results = new ArrayList<Future<String>>();
+        for(int i = 0; i< 10;i++){
+            results.add(exec.submit(new TaskWithResult(i)));
+        }
+        for(Future<String> fs:results){
+            try{
+                System.out.println(fs.get);
+            }catch(InterruptedException e){
+                System.out.println(e);
+                return;
+            }catch (ExecutionException e){
+                System.out.println(e);
+            }finally{
+                exec.shutdowm();
+            }
+        }
+    }
+}
+```
+
+在上面的例子中submit()方法会产生Future对象，它用Callable返回结果的特定类型进行了参数化。
+
+可以使用isDone()方法来查询Future是否已经完成。
+
+当任务完成时，它具有一个结果，你可以调用get()方法来获取该结果。
+
+也可以不同isDone()进行检查就直接调用get()。在这种情况下，get()将阻塞，直到结果准备就绪。所以可以在试图调用get()之前，先调用具有超时的get()或者调用isDone()来查看任务是否完成
+
+### 39.6 休眠
+
+> 影响任务行为的一种简单方法是调用sleep()，这将使任务中止执行给定的时间
+
+```java
+public class SleepingTask extends liftOff{
+    public void run(){
+        try{
+            while(countDown >0){
+                System.out.println(status());
+                TimeUnit.MILLISECONDS.sleep(100);
+            }
+        }catch (InterruptedException e){
+            System.out.println("Interrupted");
+        }
+    }
+    public static void main(String[] args){
+    
+        ExecutorService exec = Exectors.newCacedThreadPool();
+        for(int i = 0;i<5;i++){
+            exec.execute(new SleepingTask());
+        }
+        exec.shutdown();
+    }   
+
+}
+```
+
+要注意的是，对sleep()的调用可以抛出InterruptedException的异常，因为异常不能跨线程传播回main()，所以你必须在本地处理所有在任务内部产生的异常
+
+使用sleep()延迟后，每个任务都将要睡眠在执行打印语句之后，这使得线程调度器可以切换到另一个线程，进而驱动另一个任务。
+
+
+### 39.7 优先级
+
+> 线程的优先级将该线程的重要性传递给了调取器，尽管CPU处理现有线程集的顺序是不确定的，但是调度器将倾向于让优先级最高的线程先执行。然后这并不意味着优先级较低的线程将得不到执行（也就是说，优先级不会导致死锁）。优先级较低的线程仅仅是执行的频率较低
+>
+> 在大多数的时间里，所有线程都应该以默认的优先级运行。
+>
+> 可以使用getPriority()来去读现有线程的优先级，并且在任何时刻都可以通过setPriority()来修改它
+
+```java
+public class SimplePriorities implements Runnable{
+    private int countDown = 5;
+    private volatile double d;
+    private int priority;
+    public SimplePriorities(int priority){
+        this.priority = priority;
+    }
+    public String toString(){
+        return Thread.currentThread() + ": " + countDown;
+    }
+    public void run(){
+        Thread.currentThread().setPriority(priority);
+        while(true){
+            for (int i = 1;i<10000;i++){
+                d += (Math.PI + Math.E);
+                if (i % 1000 == 0){
+                    Thread.yield();
+                }
+            }
+            System.out.println(this);
+            if((--countDown )== 0){
+                return;
+            }
+        }
+    }
+    public static void main(String[] args){
+        ExecutorService exec = Exectors.newCacedThreadPool();
+            for(int i = 0;i<5;i++){
+                exec.execute(new SimplePriorities(Thread.MIN_PRIORITY));
+                exec.execute(new SimplePriorities(Thread.MAX_PRIORITY));
+            }
+            exec.shutdown();
+    }
+
+}
+    
+```
+
+在上面的例子中，toString()方法被覆盖，以便使用Thread.toString()方法来打印线程的名称，线程的优先级以及线程所属的线程组
+
+通过调用Thread.currentThread()来获得对驱动该任务的Thread对象的引用。
+
+### 39.8 让步
+
+完成了在run()方法后，就可以高度线程调度机制：工作完成的差不多了，可以让别的线程使用CPU了。这个过程也可以通过用yield()方法来通知(这只是一个通知，没有任何机制保证它将会被采纳)，当调用时，也可以建议具有相同优先级的其他线程可以运行
+
+### 39.9 后台线程
+
+所有后台线程，是指在程序运行的时候在后台提供一种通用服务的线程，并且这种线程并不属于程序中不可或缺的部分。因此，当所有的非后台线程结束时，程序也就终止了，同时会杀死进程中所有的后台线程。
+
+反过来说，只要有任何非后台线程还在运行，程序就不会终止。比如，执行main()就是一个非后台线程
+
+### 39.10 继承Thread创建任务
+
+## 四十、共享受限资源
+
+可以把单线程程序当作在问题域求解的单一实体，每次只能做一件事情。因为只有一个实体，所以永远不会担心"两个实体视图同时使用同一资源"这样的问题。比如，两个个人在同一个地方停车，两个人同时走过一扇门，甚至是两个人同时说话
+
+有了并发就可以同时做多件事情了，但是，两个或多个线程彼此互相干涉的问题也就出现了。如果不防范这种冲突，就可能发生两个线程同时视图访问同一个银行账户，改变同一个值等诸如此类的问题
+
+### 40.1 不正确地访问资源
 

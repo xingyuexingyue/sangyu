@@ -1,0 +1,2 @@
+Collections.addAll()方法接受一个Collection对象，以及一个数组或是一个用逗号分隔的列表，将其添加到Collection中
+

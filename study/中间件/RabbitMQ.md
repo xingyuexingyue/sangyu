@@ -2,7 +2,7 @@
 
 消息服务中间件可以提升系统异步通信、扩展解耦能力。
 
-#### 异步通信
+### 1.1 异步通信
 
 传统注册流程和使用消息队列比较
 
@@ -18,7 +18,7 @@
 
 ![消息队列](https://upload-images.jianshu.io/upload_images/2765653-139cabe10b432502.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### 应用解耦
+### 1.2 应用解耦
 
 传统方式下单后调用库存系统更新商品的剩余库存。采用消息队列方式，可达到应用解耦，下单后订单系统调用mq将消息写入到消息队列，由库存系统订阅消息队列并按照业务逻辑处理对应消息
 
@@ -27,7 +27,7 @@
 
 ![采用消息队列方式](https://upload-images.jianshu.io/upload_images/2765653-88f873a102018d4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### 流量削峰
+### 1.3 流量削峰
 
 比如我们有100W用户同时抢100台手机，服务层并发请求压力至少为100W。
 
@@ -90,7 +90,7 @@ Exchange有4种类型：direct（默认）、fanout、topic和headers，不同�
 - Broker
 表示消息队列服务器实体
 
-#### 3.1 RabbitMQ 运行机制
+### 3.1 RabbitMQ 运行机制
 
 AMQP中消息的路由过程和Java开发者熟悉的JMS存在一些差别，AMQP中增加了Exchange和Binding的角色。生产者把消息发布到Exchange上，消息最终到达队列并被消费者接收，而Binding决定交换器的消息应该发送到哪个队列上。
 
@@ -116,9 +116,9 @@ Exchange分发消息时类型不同分发策略不同，目前有四种类型：
 
 topic交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分为单词，这些单词之间用点个靠。它同样也会识别两个匹配符：符号# 和 符号*，#匹配0个或多个单词，*匹配一个单词
 
-#### 3.2 RabbitMQ 使用
+### 3.2 RabbitMQ 使用
 
-1. docker 安装 RabbitMQ
+###### 1. docker 安装 RabbitMQ
 
 ```
 $ docker ps // docker查看运行的容器
@@ -147,7 +147,7 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 328854acf29841bb7bd1dee54b6d0c4c4b5077284e301fe97bcdbdd0494ddf17
 ```
 
-2. 安装成功后，[浏览器直接访问服务器地址](http://localhost:15672) ，默认用户和密码为：guest
+###### 2. 安装成功后，[浏览器直接访问服务器地址](http://localhost:15672) ，默认用户和密码为：guest
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-fec881c6f1d3f1fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![](https://upload-images.jianshu.io/upload_images/2765653-75cb5e7c671041a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -177,7 +177,6 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 添加的消息队列在列表展示
 ![添加的消息队列在列表展示](https://upload-images.jianshu.io/upload_images/2765653-c954410326974efd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
 4. 交换器绑定Binding
 
 交换器添加绑定的步骤
@@ -197,10 +196,10 @@ topic交换器 绑定消息队列->
 5. 发送消息到交换器
 
 发送到direct交换器，根据绑定时路由键（Routing key）发送到消息队列
-
 ![](https://upload-images.jianshu.io/upload_images/2765653-b9534876d9e20d67.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-![发送消息的步骤](https://upload-images.jianshu.io/upload_images/2765653-0173d0f0cbeba65a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+发送消息的步骤
+![](https://upload-images.jianshu.io/upload_images/2765653-0173d0f0cbeba65a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-b2e776a0540b7f29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -213,7 +212,7 @@ topic交换器 绑定消息队列->
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-7df01683040702d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-发送到fonout交换器，fonout绑定了所有队列 不管什么路由键是什么都可以接收消息
+发送到fonout类型交换器，fonout绑定了所有队列 不管什么路由键是什么都可以接收消息
 ![](https://upload-images.jianshu.io/upload_images/2765653-d9dd2edb2e405a7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 查看发送消息结果，四个队列都接收到了这条消息
@@ -223,7 +222,7 @@ topic交换器 绑定消息队列->
 ![任意查看一个队列](https://upload-images.jianshu.io/upload_images/2765653-4b9b18a25747a28d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-发送到topic交换器，按照路由规则接收消息
+发送到topic类型交换器，按照路由规则接收消息
 ![](https://upload-images.jianshu.io/upload_images/2765653-457bb879c5aadc49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 4个消息队列都收到了
@@ -235,7 +234,7 @@ topic交换器 绑定消息队列->
 这次只有两个收到了
 ![这次只有两个收到了](https://upload-images.jianshu.io/upload_images/2765653-d43bb25e0ea1182c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### 3.3 springboot 整合消息队列
+### 3.3 springboot 整合消息队列
 
 选择注入依赖的时候，选择web和rabbitmq
 ![选择注入依赖的时候，选择web和rabbitmq](https://upload-images.jianshu.io/upload_images/2765653-747e9c14afccfdb3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

@@ -1,4 +1,4 @@
-## 消息队列的用途
+## 一. 消息队列的用途
 
 消息服务中间件可以提升系统异步通信、扩展解耦能力。
 
@@ -35,7 +35,7 @@
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-31bc636c311a2552.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 消息队列的两个概念
+## 二. 消息队列的两个概念
 
 - 消息代理（message broker）
 - 目的地（destination）
@@ -44,18 +44,18 @@
 
 消息队列主要有两种形式的目的地：
 
-- 队列（queue）：点对点消息通信
+1. 队列（queue）：点对点消息通信
 
-消息发送者发送消息，消息代理将其放入一个队列中，消息接收者从队列中获取消息内容，消息读取后被移除队列，此时消息只有唯一的发送者和接收者，但并不是只能有一个接收者，这种情况下可以存在多个接收者，但一个接收者接收后，其他的就不再处理
+    消息发送者发送消息，消息代理将其放入一个队列中，消息接收者从队列中获取消息内容，消息读取后被移除队列，此时消息只有唯一的发送者和接收者，但并不是只能有一个接收者，这种情况下可以存在多个接收者，但一个接收者接收后，其他的就不再处理
 
-- 主题（topic）：发布（public）/订阅（subscribe）消息通信
+2. 主题（topic）：发布(public) / 订阅(subscribe) 消息通信
 
-订阅式：发送者（发布者）发送消息到主题，多个接收者（订阅者）监听（订阅）这个主题，那么就会在消息到达时同时收到消息
+    订阅式：发送者（发布者）发送消息到主题，多个接收者（订阅者）监听（订阅）这个主题，那么就会在消息到达时同时收到消息
 
 再说下JMS和AMQP，JMS（Java Messge Service） JAVA消息服务是给予JVM消息代理的规范。ActiveMQ、HornetMQ是JMS实现；
 AMQP是高级消息队列协议，也是一个消息代理的规范，兼容JMS，RabbitMQ是AMQP的实现，AMQP提供了五种消息模型：direct exchange、fanout exchange、topic exchange、headers exchange、system exchange；
 
-## RabbitMQ
+## 三. RabbitMQ
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-5185b52910306d9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
@@ -90,17 +90,11 @@ Exchange有4种类型：direct（默认）、fanout、topic和headers，不同�
 - Broker
 表示消息队列服务器实体
 
-
-
-RabbitMQ 运行机制
-
-- Exchange
+#### RabbitMQ 运行机制
 
 AMQP中消息的路由过程和Java开发者熟悉的JMS存在一些差别，AMQP中增加了Exchange和Binding的角色。生产者把消息发布到Exchange上，消息最终到达队列并被消费者接收，而Binding决定交换器的消息应该发送到哪个队列上。
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-47a135ed46e30333.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
--  Exchange
 
 Exchange分发消息时类型不同分发策略不同，目前有四种类型：direct、fanout、topic、headers。headers匹配AMQP消息的header而不是路由键，headers交换器和direct交换器完全一致，但性能相差很多，目前几乎用不到了，所以直接看另外三种类型：
 
@@ -122,6 +116,7 @@ Exchange分发消息时类型不同分发策略不同，目前有四种类型：
 
 topic交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分为单词，这些单词之间用点个靠。它同样也会识别两个匹配符：符号# 和 符号* *，#匹配0个或多个单词，*匹配一个单词
 
+#### RabbitMQ 使用
 
 1、docker 安装 RabbitMQ
 

@@ -1,20 +1,22 @@
 消息服务中间件可以提升系统异步通信、扩展解耦能力。
 
-举个例子：传统注册流程和使用消息队列比较
+## 异步通信
+
+传统注册流程和使用消息队列比较
 
 第一种：用户注册信息写入数据库后在按照顺序先后发送注册邮件和短信，走完这三步后用户才完成注册
 
 ![传统注册流程](https://upload-images.jianshu.io/upload_images/2765653-6b873176e68febfe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-第二种：用户注册消息写入数据后通过开启线程池的方式，同时发送邮件和注册短信，两个线程完成后返回，用户注册完成
+第二种：用户注册消息写入数据库后通过开启线程池的方式，同时发送邮件和注册短信，两个线程完成后返回，用户注册完成
 
 ![采用多线程方式](https://upload-images.jianshu.io/upload_images/2765653-44595675b7b462de.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-第三步：用户注册消息写入数据后将消息写入到消息队列，此时发送邮件和发送短信通过异步读取消息队列执行具体的操作，但在写入消息队列之前已经返回给用户，用户注册完成，而发送短信和邮件是异步操作
+第三种：用户注册消息写入数据库后将消息写入消息队列，此时发送邮件和发送短信通过异步读取消息队列执行具体的操作，但在写入消息队列之前已经返回给用户，用户注册完成，而发送短信和邮件是异步操作
 
 ![消息队列](https://upload-images.jianshu.io/upload_images/2765653-139cabe10b432502.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-应用解耦
+## 应用解耦
 
 传统方式下单后调用库存系统更新商品的剩余库存。采用消息队列方式，可达到应用解耦，下单后订单系统调用mq将消息写入到消息队列，由库存系统订阅消息队列并按照业务逻辑处理对应消息
 
@@ -24,7 +26,7 @@
 ![采用消息队列方式](https://upload-images.jianshu.io/upload_images/2765653-88f873a102018d4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-流量削峰
+## 流量削峰
 
 比如我们有100W用户同时抢100台手机，服务层并发请求压力至少为100W。
 
@@ -45,20 +47,22 @@
 
 订阅式：发送者（发布者）发送消息到主题，多个接收者（订阅者）监听（订阅）这个主题，那么就会在消息到达时同时收到消息
 
-再说下JMS和AMOP，JAMS（Java Messge Service） JAVA消息服务是给予JVM消息代理的规范。ActiveMQ、HornetMQ是JMS实现；
-AMQP是高级消息队列协议，也是一个消息代理的规范，兼容JMS，RabbitMQ是AMQP的实现，AMQP提供了五种消息模型：direct exchage、fanout exchange、topic change、headers exchange、system exchange；
+再说下JMS和AMQP，JMS（Java Messge Service） JAVA消息服务是给予JVM消息代理的规范。ActiveMQ、HornetMQ是JMS实现；
+AMQP是高级消息队列协议，也是一个消息代理的规范，兼容JMS，RabbitMQ是AMQP的实现，AMQP提供了五种消息模型：direct exchange、fanout exchange、topic exchange、headers exchange、system exchange；
 
 #### RabbitMQ
 
+![](https://upload-images.jianshu.io/upload_images/2765653-5185b52910306d9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 - Message
-消息，消息是不具名的，它由消息头和消息体组成。消息题是不透明的，而消息头则由一系列的可选属性组成，这些属性包括routing-key（路由键）、priority（相对于其他消息的优先权）、delivery-mode（指出该消息可能需要持久性存储）等
+消息，消息是不具名的，它由消息头和消息体组成。消息体是不透明的，而消息头则由一系列的可选属性组成，这些属性包括routing-key（路由键）、priority（相对于其他消息的优先权）、delivery-mode（指出该消息可能需要持久性存储）等
 
 - Publisher
 消息的生产者，也是一个向交换器发布消息的客户端应用程序
 
 - Exchange
-交换器，用来接收生产者发送的消息并将这些消息路由给服务器中的队列
-Exchange有4中类型：direct（默认）、fanout、topic和headers，不同类型的Exchange转发消息的策略有所区别，direct指的是点对点，fanout、topic和headers指的是订阅
+交换器，用来接收生产者发送的消息并将这些消息路由给服务器中的队列；
+Exchange有4种类型：direct（默认）、fanout、topic和headers，不同类型的Exchange转发消息的策略有所区别，direct指的是点对点，fanout、topic和headers指的是订阅
 
 - Queue
 消息队列，用来保存消息直到发送给消费者，它是消息的容器，也是消息的终点。一个消息可投入一个或多个队列。消息一直在队列里面，等待消费者连接到这个队列将其取走
@@ -76,12 +80,12 @@ Exchange有4中类型：direct（默认）、fanout、topic和headers，不同�
 消息的消费者，表示一个从消息队列中取得消息的客户端应用程序
 
 - Virtual Host
-虚拟主机，表示一批交换器、消息队列和相关对象。虚拟主机是共享相同的身份认证和加密环境的独立服务器域。每个vhost本质上就是一个mini版的RabbitMQ服务器，拥有自己的队列、交换器、绑定和权限机制。vhost是AMOP概念的基础，必须在连接时指定，RabbitMQ默认的vhost是/
+虚拟主机，表示一批交换器、消息队列和相关对象。虚拟主机是共享相同的身份认证和加密环境的独立服务器域。每个vhost本质上就是一个mini版的RabbitMQ服务器，拥有自己的队列、交换器、绑定和权限机制。vhost是AMQP概念的基础，必须在连接时指定，RabbitMQ默认的vhost是/
 
 - Broker
 表示消息队列服务器实体
 
-![](https://upload-images.jianshu.io/upload_images/2765653-5185b52910306d9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+
 
 RabbitMQ 运行机制
 

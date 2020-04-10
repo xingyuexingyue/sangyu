@@ -118,7 +118,7 @@ topic交换器通过模式匹配分配消息的路由键属性，将路由键和
 
 #### 3.2 RabbitMQ 使用
 
-1、docker 安装 RabbitMQ
+1. docker 安装 RabbitMQ
 
 ```
 $ docker ps // docker查看运行的容器
@@ -147,46 +147,53 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 328854acf29841bb7bd1dee54b6d0c4c4b5077284e301fe97bcdbdd0494ddf17
 ```
 
-[浏览器直接访问服务器地址](http://localhost:15672) ，默认用户和密码为：guest
+2. 安装成功后，[浏览器直接访问服务器地址](http://localhost:15672) ，默认用户和密码为：guest
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-fec881c6f1d3f1fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![](https://upload-images.jianshu.io/upload_images/2765653-75cb5e7c671041a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-2、添加交换器
+3. 添加交换器，选择Durable持久化的原因是，关闭服务器后交换器还在
 
-![添加交换器的步骤，选择Durable持久化的原因是，关闭服务器后交换器还在](https://upload-images.jianshu.io/upload_images/2765653-f542a0de120b9cf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![](https://upload-images.jianshu.io/upload_images/2765653-f542a0de120b9cf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-分别添加direct、fanout、topic
+添加direct类型
 
 ![添加direct](https://upload-images.jianshu.io/upload_images/2765653-4dc1f10b8f93eb0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+添加fanout类型
 ![添加fanout](https://upload-images.jianshu.io/upload_images/2765653-7493ef4b15e26550.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+添加topic类型
 ![添加 topic](https://upload-images.jianshu.io/upload_images/2765653-01ef22bce23e53a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+添加的交换器在列表展示
 ![添加的交换器在列表展示](https://upload-images.jianshu.io/upload_images/2765653-db0c450a09bde6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-3、添加消息队列 
+3. 添加消息队列 
 
 ![添加消息队列的步骤](https://upload-images.jianshu.io/upload_images/2765653-14933c52c284bf7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+添加的消息队列在列表展示
 ![添加的消息队列在列表展示](https://upload-images.jianshu.io/upload_images/2765653-c954410326974efd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-4、交换器绑定Binding
+4. 交换器绑定Binding
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-cd518f6c0a1277f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-966a494c9e2ce538.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+direct交换器 绑定消息队列
 ![direct交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-d3de912803cf1187.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+fonout交换器 绑定消息队列
 ![fonout交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-0da5f3a56b2bf0a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+topic交换器 绑定消息队列
 ![topic交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-e4e4b18dc54c090d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
-5、发送消息到交换器
+5. 发送消息到交换器
 
 发送到direct交换器，根据绑定时路由键（Routing key）发送到消息队列
 
@@ -196,37 +203,40 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-b2e776a0540b7f29.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+6. 查看发送消息结果
+
 ![查看发送消息结果](https://upload-images.jianshu.io/upload_images/2765653-667cbfb72697ec80.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 消息队列中get message
-
 ![](https://upload-images.jianshu.io/upload_images/2765653-eecb7e28debb72ea.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-7df01683040702d2.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 发送到fonout交换器，fonout绑定了所有队列 不管什么路由键是什么都可以接收消息
-
 ![](https://upload-images.jianshu.io/upload_images/2765653-d9dd2edb2e405a7d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+查看发送消息结果，四个队列都接收到了这条消息
 ![查看发送消息结果，四个队列都接收到了这条消息](https://upload-images.jianshu.io/upload_images/2765653-9d6aa1c23ed1501f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+任意查看一个队列
 ![任意查看一个队列](https://upload-images.jianshu.io/upload_images/2765653-4b9b18a25747a28d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 
 发送到topic交换器，按照路由规则接收消息
-
 ![](https://upload-images.jianshu.io/upload_images/2765653-457bb879c5aadc49.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+4个消息队列都收到了
 ![4个消息队列都收到了](https://upload-images.jianshu.io/upload_images/2765653-d37872dd465a6ff1.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+继续发送一个其他的消息测试
 ![继续发送一个其他的消息测试](https://upload-images.jianshu.io/upload_images/2765653-d1ae06136b9cd4fc.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+这次只有两个收到了
 ![这次只有两个收到了](https://upload-images.jianshu.io/upload_images/2765653-d43bb25e0ea1182c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 #### 3.3 springboot 整合消息队列
 
-使用idea 创建过程，可参考前几篇中的内容
-
+选择注入依赖的时候，选择web和rabbitmq
 ![选择注入依赖的时候，选择web和rabbitmq](https://upload-images.jianshu.io/upload_images/2765653-747e9c14afccfdb3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ```

@@ -118,7 +118,7 @@ topic交换器通过模式匹配分配消息的路由键属性，将路由键和
 
 ### 3.2 RabbitMQ 使用
 
-###### 1. docker 安装 RabbitMQ
+##### 1. docker 安装 RabbitMQ
 
 ```
 $ docker ps // docker查看运行的容器
@@ -147,17 +147,17 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 328854acf29841bb7bd1dee54b6d0c4c4b5077284e301fe97bcdbdd0494ddf17
 ```
 
-###### 2. 安装成功后，[浏览器直接访问服务器地址](http://localhost:15672) ，默认用户和密码为：guest
+##### 2. 安装成功后，[浏览器直接访问服务器地址](http://localhost:15672) ，默认用户和密码为：guest
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-fec881c6f1d3f1fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![](https://upload-images.jianshu.io/upload_images/2765653-75cb5e7c671041a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###### 3. 添加交换器，选择Durable持久化的原因是，关闭服务器后交换器还在
+##### 3. 添加交换器，选择Durable持久化的原因是，关闭服务器后交换器还在
 
-添加交换器的步骤
+###### 添加交换器的步骤
 ![](https://upload-images.jianshu.io/upload_images/2765653-f542a0de120b9cf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-添加direct类型->
+###### 添加direct类型->
 ![](https://upload-images.jianshu.io/upload_images/2765653-4dc1f10b8f93eb0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 添加fanout类型->

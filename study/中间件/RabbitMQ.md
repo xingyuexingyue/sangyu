@@ -1,6 +1,8 @@
+## 消息队列的用途
+
 消息服务中间件可以提升系统异步通信、扩展解耦能力。
 
-## 异步通信
+#### 异步通信
 
 传统注册流程和使用消息队列比较
 
@@ -16,7 +18,7 @@
 
 ![消息队列](https://upload-images.jianshu.io/upload_images/2765653-139cabe10b432502.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-## 应用解耦
+#### 应用解耦
 
 传统方式下单后调用库存系统更新商品的剩余库存。采用消息队列方式，可达到应用解耦，下单后订单系统调用mq将消息写入到消息队列，由库存系统订阅消息队列并按照业务逻辑处理对应消息
 
@@ -25,8 +27,7 @@
 
 ![采用消息队列方式](https://upload-images.jianshu.io/upload_images/2765653-88f873a102018d4f.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-
-## 流量削峰
+#### 流量削峰
 
 比如我们有100W用户同时抢100台手机，服务层并发请求压力至少为100W。
 
@@ -34,6 +35,10 @@
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-31bc636c311a2552.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
+## 消息队列的两个概念
+
+- 消息代理（message broker）
+- 目的地（destination）
 
 当消息发送者发送消息以后，将由消息代理接管，消息代理保证消息传递到指定目的地。
 
@@ -50,7 +55,7 @@
 再说下JMS和AMQP，JMS（Java Messge Service） JAVA消息服务是给予JVM消息代理的规范。ActiveMQ、HornetMQ是JMS实现；
 AMQP是高级消息队列协议，也是一个消息代理的规范，兼容JMS，RabbitMQ是AMQP的实现，AMQP提供了五种消息模型：direct exchange、fanout exchange、topic exchange、headers exchange、system exchange；
 
-#### RabbitMQ
+## RabbitMQ
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-5185b52910306d9a.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 

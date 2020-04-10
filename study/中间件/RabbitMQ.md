@@ -160,13 +160,13 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 添加direct类型->
 ![](https://upload-images.jianshu.io/upload_images/2765653-4dc1f10b8f93eb0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-添加fanout类型
+添加fanout类型->
 ![](https://upload-images.jianshu.io/upload_images/2765653-7493ef4b15e26550.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-添加topic类型
+添加topic类型->
 ![](https://upload-images.jianshu.io/upload_images/2765653-01ef22bce23e53a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-添加的交换器在列表展示
+添加的交换器在列表展示->
 ![添加的交换器在列表展示](https://upload-images.jianshu.io/upload_images/2765653-db0c450a09bde6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 3. 添加消息队列 

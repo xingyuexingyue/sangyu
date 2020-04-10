@@ -187,10 +187,10 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 ###### direct交换器 绑定消息队列
 ![direct交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-d3de912803cf1187.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###### fonout交换器 绑定消息队列->
+###### fonout交换器 绑定消息队列
 ![fonout交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-0da5f3a56b2bf0a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###### topic交换器 绑定消息队列->
+###### topic交换器 绑定消息队列
 ![topic交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-e4e4b18dc54c090d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ##### 6. 发送消息到交换器

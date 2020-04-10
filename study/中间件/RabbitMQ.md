@@ -180,19 +180,19 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 
 4. 交换器绑定Binding
 
+交换器添加绑定的步骤
 ![](https://upload-images.jianshu.io/upload_images/2765653-cd518f6c0a1277f3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 ![](https://upload-images.jianshu.io/upload_images/2765653-966a494c9e2ce538.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-direct交换器 绑定消息队列
+direct交换器 绑定消息队列->
 ![direct交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-d3de912803cf1187.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-fonout交换器 绑定消息队列
+fonout交换器 绑定消息队列->
 ![fonout交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-0da5f3a56b2bf0a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-topic交换器 绑定消息队列
+topic交换器 绑定消息队列->
 ![topic交换器 绑定消息队列](https://upload-images.jianshu.io/upload_images/2765653-e4e4b18dc54c090d.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
 
 5. 发送消息到交换器
 

@@ -154,6 +154,7 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 
 3. 添加交换器，选择Durable持久化的原因是，关闭服务器后交换器还在
 
+添加交换器的步骤
 ![](https://upload-images.jianshu.io/upload_images/2765653-f542a0de120b9cf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 添加direct类型

@@ -154,27 +154,27 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 
 ##### 3. 添加交换器，选择Durable持久化的原因是，关闭服务器后交换器还在
 
-###### 添加交换器的步骤
+###### 3.1 添加交换器的步骤
 ![](https://upload-images.jianshu.io/upload_images/2765653-f542a0de120b9cf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###### 添加direct类型->
+###### 3.2 添加direct类型
 ![](https://upload-images.jianshu.io/upload_images/2765653-4dc1f10b8f93eb0b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-添加fanout类型->
+###### 3.3  添加fanout类型
 ![](https://upload-images.jianshu.io/upload_images/2765653-7493ef4b15e26550.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-添加topic类型->
+###### 3.4 添加topic类型
 ![](https://upload-images.jianshu.io/upload_images/2765653-01ef22bce23e53a0.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-添加的交换器在列表展示->
+###### 3.5 添加的交换器在列表展示->
 ![添加的交换器在列表展示](https://upload-images.jianshu.io/upload_images/2765653-db0c450a09bde6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-###### 3. 添加消息队列 
+##### 4. 添加消息队列 
 
-添加消息队列的步骤
+###### 4.1 添加消息队列的步骤
 ![添加消息队列的步骤](https://upload-images.jianshu.io/upload_images/2765653-14933c52c284bf7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-添加的消息队列在列表展示
+###### 4.2 添加的消息队列在列表展示
 ![添加的消息队列在列表展示](https://upload-images.jianshu.io/upload_images/2765653-c954410326974efd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 4. 交换器绑定Binding

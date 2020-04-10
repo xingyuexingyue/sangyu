@@ -152,7 +152,7 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 ![](https://upload-images.jianshu.io/upload_images/2765653-fec881c6f1d3f1fe.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 ![](https://upload-images.jianshu.io/upload_images/2765653-75cb5e7c671041a9.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-3. 添加交换器，选择Durable持久化的原因是，关闭服务器后交换器还在
+###### 3. 添加交换器，选择Durable持久化的原因是，关闭服务器后交换器还在
 
 添加交换器的步骤
 ![](https://upload-images.jianshu.io/upload_images/2765653-f542a0de120b9cf3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
@@ -169,7 +169,7 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 添加的交换器在列表展示->
 ![添加的交换器在列表展示](https://upload-images.jianshu.io/upload_images/2765653-db0c450a09bde6ed.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-3. 添加消息队列 
+###### 3. 添加消息队列 
 
 添加消息队列的步骤
 ![添加消息队列的步骤](https://upload-images.jianshu.io/upload_images/2765653-14933c52c284bf7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)

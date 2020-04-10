@@ -90,7 +90,7 @@ Exchange有4种类型：direct（默认）、fanout、topic和headers，不同�
 - Broker
 表示消息队列服务器实体
 
-#### RabbitMQ 运行机制
+#### 3.1 RabbitMQ 运行机制
 
 AMQP中消息的路由过程和Java开发者熟悉的JMS存在一些差别，AMQP中增加了Exchange和Binding的角色。生产者把消息发布到Exchange上，消息最终到达队列并被消费者接收，而Binding决定交换器的消息应该发送到哪个队列上。
 
@@ -98,25 +98,25 @@ AMQP中消息的路由过程和Java开发者熟悉的JMS存在一些差别，AMQ
 
 Exchange分发消息时类型不同分发策略不同，目前有四种类型：direct、fanout、topic、headers。headers匹配AMQP消息的header而不是路由键，headers交换器和direct交换器完全一致，但性能相差很多，目前几乎用不到了，所以直接看另外三种类型：
 
-- Direct
+1. Direct
 
 ![Direct Exchange](https://upload-images.jianshu.io/upload_images/2765653-9591bc418fe83edd.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 消息中的路由键如果和Binding中的binding key一致，交换器就将消息发到对应的队列中。路由键与队列名完全匹配，如果一个队列绑定到交换机要求路由键为 “dog”，则交换器只转发“dog”的消息到此消息队列。不会转发“dog.puppy”,也不会转发“dog.guard”等等。direct是完全匹配、单播的模式。
 
-- Fanout
+2. Fanout
 
 ![Fanout Exchange](https://upload-images.jianshu.io/upload_images/2765653-13363fd86236639e.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 每个发到Fanout类型交换器的消息都会分到所有绑定的队列上去。fanout交换器不处理路由键，只是简单的将队列交换器上，每个发送到交换器的消息都会被转发到与该交换器绑定的所有队列上。很像子网广播，每个子网内的主机都获得了一份复制的消息。fanout类型转发消息是最快的
 
-- topic
+3. topic
 
 ![Topic Exchange](https://upload-images.jianshu.io/upload_images/2765653-f681086a9c560ba6.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-topic交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分为单词，这些单词之间用点个靠。它同样也会识别两个匹配符：符号# 和 符号* *，#匹配0个或多个单词，*匹配一个单词
+topic交换器通过模式匹配分配消息的路由键属性，将路由键和某个模式进行匹配，此时队列需要绑定到一个模式上。它将路由键和绑定键的字符串切分为单词，这些单词之间用点个靠。它同样也会识别两个匹配符：符号# 和 符号*，#匹配0个或多个单词，*匹配一个单词
 
-#### RabbitMQ 使用
+#### 3.2 RabbitMQ 使用
 
 1、docker 安装 RabbitMQ
 
@@ -223,7 +223,7 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 
 ![这次只有两个收到了](https://upload-images.jianshu.io/upload_images/2765653-d43bb25e0ea1182c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
-#### springboot 整合消息队列
+#### 3.3 springboot 整合消息队列
 
 使用idea 创建过程，可参考前几篇中的内容
 

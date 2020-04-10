@@ -171,6 +171,7 @@ $ docker run -d -p 5672:5672 -p 15672:15672 --name myrabbitmq 4c8cb17c3ab5 // �
 
 3. 添加消息队列 
 
+添加消息队列的步骤
 ![添加消息队列的步骤](https://upload-images.jianshu.io/upload_images/2765653-14933c52c284bf7c.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
 
 添加的消息队列在列表展示

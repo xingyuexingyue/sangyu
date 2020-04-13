@@ -334,6 +334,13 @@
 
 - H5平台特性
 
+- Python
+    - [ ] 基础语法
+    - [ ] 常用库
+        - SQLAlchemy
+        - jsonpath
+    - [ ] 常用类 
+
 
     
         

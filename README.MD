@@ -8,35 +8,7 @@
 以下语言要简单掌握语法：
 
 - [ ] JS
-- [ ] 前端
-
-## 相关课程视频资源
-
-- [ ] [Dubbo ](https://www.bilibili.com/video/av62353311/?pikaqiu)
-
-- [ ] [Spring ](https://www.bilibili.com/video/av59570922/?pikaqiu)
-
-- [ ] [SpringMVC ](https://www.bilibili.com/video/av59567541/?pikaqiu)
-
-- [ ] [SpringBoot ](https://www.bilibili.com/video/av59572480/?pikaqiu)
-
-- [ ] [MyBatis ](https://www.bilibili.com/video/av59564271/?pikaqiu)
-
-- [ ] [rocketmq](https://www.bilibili.com/video/av11074519)
-
-- [ ] [RabbitMQ消息中间件](https://www.imooc.com/learn/1042)
-
-- [ ] [消息队列 Kafka ]()
-
-- [ ] [Redis入门](https://www.imooc.com/learn/839)
-
-- [ ] [MySQL](https://www.bilibili.com/video/av59623481/?pikaqiu)
-
-- [ ] [Elasticsearch](https://www.bilibili.com/video/av59628430/?pikaqiu)
-
-- [ ] [Git](https://www.bilibili.com/video/av59634634/?pikaqiu)
-
-- [ ] [Nginx](https://www.bilibili.com/video/av59639498/?pikaqiu)
+- [ ] H5/Bootstrap
 
 ## 数据结构
 
@@ -45,15 +17,12 @@
         - [ ] [ ]  —— 访问数组中的元素
         - [ ] length  —— 访问数组的长度（注意是数组的大小，不是实际保存的元素个数）
         - [ ] Arrays.toString() —— 将数组转换为String
-        - [ ] Arrays.deepToString() —— 将多维数组转换为多个String
         - [ ] Arrays.fill() —— 给数组填充值
         - [ ] Arrays.equals() —— 比较两个数组是否相等；相等的条件是：元素个数必须相等，并且对应位置的元素也相等
         - [ ] Arrays.sort() —— 数组排序
         - [ ] Arrays.binarySearch() —— 在排好序的数组中查找元素
         - [ ] System.arraycopy() —— 复制数组；参数：源数组，从源数组什么位置开始复制，目标数组，从什么位置开始复制，需要复制的个数
-        - [ ] Arrays.asList() —— 接收一个数组或是一个用逗号分隔的元素列表（使用可变参数），并将其转为一个List对象
-        
-        
+        - [ ] Arrays.asList() —— 接收一个数组或是一个用逗号分隔的元素列表（使用可变参数），并将其转为一个List对象    
 
 - 动态数组
     - 实现一个可自动调整大小的动态数组
@@ -71,12 +40,10 @@
         - [ ] resize(new_capacity) // 私有函数
             - 若数组的大小到达其容积，则变大一倍
             - 获取元素后，若数组大小为其容积的1/4，则缩小一半
-
-- 堆
-
 - 栈 
     - [ ] 先进后出
     - [ ] [使用数组实现栈（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=30)
+
 - 队列
     - [ ] 先进先出
     - [ ] [使用数组实现队列（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=10)
@@ -92,7 +59,18 @@
     - [ ] [双向链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=24)
     - [ ] [环形链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=27)
     
-- [ ] 哈希表
+- 哈希表
+    - [ ] 创建 HashMap 对象 `HashMap<String,Integer> hashMap = new HashMap<>();`
+    - [ ] 添加键值对 `hashMap.put("a",1);` 
+    - [ ] 删除键值对 `hashMap.remove("a",5);`
+    - [ ] 获取key 的 value `hashMap.get("cc");`
+    - [ ] 判断 key 是否存在 `hashMap.containsKey("bb")'
+    - [ ] 获得 key 的集合 `hashMap.keySet()`
+    - [ ] 获得 key-value 的集合 `hashMap.entrySet();`
+    - [ ] 替换 key 的 value `hashMap.replace("ff".5);`
+    - [ ] 元素遍历
+    
+
 
 
 ## 树（Trees）
@@ -341,6 +319,32 @@
         - jsonpath
     - [ ] 常用类 
 
+## 相关课程视频资源
 
+- [ ] [Dubbo ](https://www.bilibili.com/video/av62353311/?pikaqiu)
+
+- [ ] [Spring ](https://www.bilibili.com/video/av59570922/?pikaqiu)
+
+- [ ] [SpringMVC ](https://www.bilibili.com/video/av59567541/?pikaqiu)
+
+- [ ] [SpringBoot ](https://www.bilibili.com/video/av59572480/?pikaqiu)
+
+- [ ] [MyBatis ](https://www.bilibili.com/video/av59564271/?pikaqiu)
+
+- [ ] [rocketmq](https://www.bilibili.com/video/av11074519)
+
+- [ ] [RabbitMQ](https://www.imooc.com/learn/1042)
+
+- [ ] [消息队列 Kafka ]()
+
+- [ ] [Redis入门](https://www.imooc.com/learn/839)
+
+- [ ] [MySQL](https://www.bilibili.com/video/av59623481/?pikaqiu)
+
+- [ ] [Elasticsearch](https://www.bilibili.com/video/av59628430/?pikaqiu)
+
+- [ ] [Git](https://www.bilibili.com/video/av59634634/?pikaqiu)
+
+- [ ] [Nginx](https://www.bilibili.com/video/av59639498/?pikaqiu)
     
         

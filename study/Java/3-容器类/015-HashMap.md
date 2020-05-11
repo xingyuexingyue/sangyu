@@ -1,3 +1,6 @@
+
+## HashMap 的循环
+
 ```java
 public class HashMapTest{
     public static void main(String[] args){
@@ -23,3 +26,87 @@ public class HashMapTest{
     }
 }
 ```
+
+## HashMap 的基本用法
+
+##### 创建HashMap对象
+
+```
+HashMap<String,Integer> hashMap = new HashMap<>();
+```
+##### 添加键值对
+
+如果key已经存在，则返回旧value，并将新的value存到该key中；
+
+如果key不存在，则返回null，保存 key-value
+
+```
+hashMap.put("aa",1);
+hashMap.put("bb",2);
+hashMap.put("cc",3);
+```
+
+put方法会覆盖原有的value，而另一种put方法不会覆盖：putIfAbsent(key,value)
+
+```
+hashMap.putIfAbsent("aa",4);
+```
+
+首先会判断key是否存在，如果存在且value不为null，则不会覆盖原有的value，并返回原来的value；
+
+如果key不存在或者key的value为null，则会put进新值，并返回null。
+
+另外，两种方法当key=null时，并不会抛出异常，而是按照一个特殊的方法进行存储。
+
+##### 删除元素
+
+remove(key):删除成功(存在key)，返回被删除的key对应的value，否则返回null。
+
+remove(key,value):删除成功（存在entry），返回true，否则返回false。
+
+```
+hashMap.remove("bb");
+
+hashMap.remove("aa",5);
+```
+
+##### 获取元素
+
+对于获取元素，有get(key)和getOrDefault(key,defaultValue)（1.8之后）两种方法.
+
+```
+hashMap.get("cc")
+```
+
+getOrDefault在key不存在时,返回一个defaultValue。在没有该方法前需要这样写：
+
+
+```
+Integer bbValue = hashMap.containsKey("bb")?hashMap.get("bb"):-1;
+```
+
+有了getOrDefault可以这样写：
+
+```
+getOrDefault("aa",-1)//key=aa不存在，所以返回默认value -1
+```
+
+##### 判断key或value是否存在
+
+```
+hashMap.containsKey("aa");
+
+hashMap.containsValue(1);
+```
+
+##### 替换元素
+
+对于存在的key，调用replace方法，会替换原来的value，并返回旧value，这和put的效果是一样的；对于不存在的key，replace方法什么都不做。这就是他和put的区别（put在key不存在时将新key-value加入map
+
+
+```
+hashMap.replace("ff",5);
+```
+
+
+

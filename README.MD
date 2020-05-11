@@ -15,7 +15,7 @@
 - 数组
     - 数组是一种效率最高的存储和随机访问对象引用序列的方式
         - [ ] [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-%E6%95%B0%E7%BB%84.md)
-        - [ ] 初始化
+        - [ ] 数组初始化
         - [ ] [ ] —— 访问数组中的元素
         - [ ] length  —— 访问数组的长度（注意是数组的大小，不是实际保存的元素个数）
         - [ ] Arrays.toString() —— 将数组转换为String

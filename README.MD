@@ -71,15 +71,7 @@
     - [ ] 获得 key 的集合 `hashMap.keySet()`
     - [ ] 获得 key-value 的集合 `hashMap.entrySet();`
     - [ ] 替换 key 的 value `hashMap.replace("ff".5);`
-    - [ ] [元素遍历](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-HashMap.md)
-
-- 树
-    - [ ] [代码实现]()
-    - [ ] 遍历
-    - [ ] 中序遍历（DFS：左、节点本身、右）
-    - [ ] 后序遍历（DFS：左、右、节点本身）
-    - [ ] 先序遍历（DFS：节点本身、左、右）
-    
+    - [ ] [元素遍历](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-HashMap.md)   
 
 ## 排序
 
@@ -91,7 +83,6 @@
     - [ ] 希尔排序 [代码位置]()
     - [ ] 归并排序 [代码位置]()
     - [ ] 快排 [代码位置]()
-    
     
 
 ## 其他知识

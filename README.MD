@@ -203,11 +203,10 @@
     - [ ] mock 
     - [ ] 使用dubbo mock请求方的响应数据  
     
-- 要掌握的开发技术栈
+- 练习
     - [ ] 一个完整的CURD项目 [](https://github.com/xingyuexingyue/SSM-CURD)
-        - 使用的技术点
-            - Java语言：：spring+springmvc+mybaits+bootstrap+mysql
-            - python语言：Django+bootstrap+mysql
+        - spring+springmvc+mybaits+bootstrap+mysql
+       
 
 ## 相关课程视频资源
 

@@ -43,23 +43,24 @@
             - 获取元素后，若数组大小为其容积的1/4，则缩小一半
 - 栈 
     - [ ] 先进后出 
-    - [ ] [使用数组实现栈（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=30)
+    - [ ] 
 
 - 队列
-    - [ ] 先进先出
-    - [ ] [使用数组实现队列（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=10)
+    - [ ] 先进先出 有序
+    - [ ] 普通队列 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/012-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97.md)     
         - enqueue(value) —— 在可容的情况下添加元素到尾部
         - dequeue() —— 删除最早添加的元素并返回其值
         - empty()
         - full()
-    - [ ] [使用数组实现环形队列](https://www.bilibili.com/video/BV16t411g7wa?p=10)
+    - [ ] 环形队列 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/012-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97.md#%E5%AE%9E%E7%8E%B0%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97)
         
 
 - 链表
-    - [ ] [单链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=16) 
-    - [ ] [双向链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=24)
-    - [ ] [环形链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=27)
-    
+    - 特点：新增和删除更加高效
+    - 单向链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md) 
+    - 双向链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/010-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.md)
+
+
 - 哈希表
     - [ ] 创建 HashMap 对象 `HashMap<String,Integer> hashMap = new HashMap<>();`
     - [ ] 添加键值对 `hashMap.put("a",1);` 
@@ -72,10 +73,12 @@
     - [ ] [元素遍历](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-HashMap.md)
 
 - 树
+    - [ ] [代码实现]()
     - [ ] 遍历
     - [ ] 中序遍历（DFS：左、节点本身、右）
     - [ ] 后序遍历（DFS：左、右、节点本身）
     - [ ] 先序遍历（DFS：节点本身、左、右）
+    
 
 ## 排序
 
@@ -235,5 +238,14 @@
 - [ ] [Git](https://www.bilibili.com/video/av59634634/?pikaqiu)
 
 - [ ] [Nginx](https://www.bilibili.com/video/av59639498/?pikaqiu)
+
+- [ ] [单链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=16) 
+
+- [ ] [双向链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=24)
+
+- [ ] [环形链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=27)
     
-        
+- [ ] [使用数组实现队列（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=10)
+
+- [ ] [使用数组实现栈（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=30)   
+- [ ] [使用数组实现环形队列](https://www.bilibili.com/video/BV16t411g7wa?p=10)     

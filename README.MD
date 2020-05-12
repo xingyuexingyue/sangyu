@@ -55,8 +55,10 @@
 - 链表
     - 特点：新增和删除更加高效
     - 单向链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md) 
+    - 单链表的反转 [代码位置]()
+    - 从尾到头打印单链表 [代码位置]()
+    - 统计单链表中有效节点的个数 [代码位置]()
     - 双向链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/010-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.md)
-
 
 - 哈希表
     - [ ] 创建 HashMap 对象 `HashMap<String,Integer> hashMap = new HashMap<>();`

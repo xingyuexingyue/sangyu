@@ -55,9 +55,10 @@
 - 链表
     - 特点：新增和删除更加高效
     - 单向链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md) 
-    - 单链表的反转 [代码位置]()
-    - 从尾到头打印单链表 [代码位置]()
-    - 统计单链表中有效节点的个数 [代码位置]()
+    - 统计单链表中有效节点的个数 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md#%E7%BB%9F%E8%AE%A1%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B8%AD%E6%9C%89%E6%95%88%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%AA%E6%95%B0)
+    - 查找单链表中的倒数第k个节点[代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md#%E6%9F%A5%E6%89%BE%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9sina)
+    - 单链表的反转 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8F%8D%E8%BD%ACtencent)
+    - 从尾到头打印单链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md#%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E5%8D%95%E9%93%BE%E8%A1%A8baidu)
     - 双向链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/010-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.md)
 
 - 哈希表

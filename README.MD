@@ -210,21 +210,13 @@
 ## Spring 原理
 
 - [ ] 常用注解
-    - [ ] @Controller 
-        - 标注控制层组件
-        - 分发处理器将会扫描使用了这个注解的类里的方法，并检测方法是否使用了@RequestMapping注解
-    - [ ] @RestController 
-        - @Controller 和 @responseBody 组合
-    - [ ] @Component 
-        - 通用组件，表示这个类被 Spring 管理
-    - [ ] @Repository 
-        - 注解 dao 层
-    - [ ] @Service
-        - 标注业务服务层组件
-    - [ ] @responseBody 
-        - 将@Controller 方法返回的对象，通过 HttpMessageConverter 转换为指定格式，写入到 Response 对象的 body 数据区，一般类型为 json 或  xml 等
-    - [ ] @RequestMapping
-        - 用于类和方法，用于类时表示所有请求的父路径
+    - [ ] @Controller 标注控制层组件 分发处理器将会扫描使用了这个注解的类里的方法，并检测方法是否使用了@RequestMapping注解
+    - [ ] @RestController @Controller 和 @responseBody 组合
+    - [ ] @Component 通用组件，表示这个类被 Spring 管理
+    - [ ] @Repository  注解 dao 层
+    - [ ] @Service 标注业务服务层组件
+    - [ ] @responseBody  将@Controller 方法返回的对象，通过 HttpMessageConverter 转换为指定格式，写入到 Response 对象的 body 数据区，一般类型为 json 或  xml 等
+    - [ ] @RequestMapping 用于类和方法，用于类时表示所有请求的父路径
     - [ ] @Autowired 自动装配注入某个类
     - [ ] @PathVariable  从路径中获得参数
     - [ ] @requestParam 定义参数
@@ -233,14 +225,14 @@
     - [ ] @Valid 实体数据校验，可以结合 hibernate validator 一起使用
     - [ ] @CookieValue 用来获取Cookie中的值
  
-- [ ] Spring 第三方框架集成
-    - shiro 认证
-    - redis 缓存
-    - Mybatis 持久
-    - Spring-Task 定时任务
-    - hibernate validator 校验框架
+- Spring 第三方框架集成
+    - [ ] shiro 认证
+    - [ ] redis 缓存
+    - [ ] Mybatis 持久
+    - [ ] Spring-Task 定时任务
+    - [ ] hibernate validator 校验框架
     
-- [ ] Spring IOC 原理
+- Spring IOC 原理
 
         
         

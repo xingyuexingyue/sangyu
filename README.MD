@@ -9,12 +9,13 @@
 
 - Java 集合
     - java.util 包中存放集合类，有3种：set、list（包含queue）和 map
-        - [ ] Collection 接口，是List、Set、Queue 的最基本的接口
+        - [ ] Collection 接口，List、Set、Queue 的最基本的接口
         - [ ] Iterator 迭代器 实现迭代器遍历集合中的元素
         - [ ] Map 映射表的基础接口
 
 - Java 并发
-    - 线程实现 / 创建方式 [代码位置]()
+    - [代码位置]()
+    - 线程实现 / 创建方式
         - [ ] 继承 Thread 类
         - [ ] 实现 Runnable 接口
         - [ ] 实现 Callable 接口 
@@ -57,7 +58,7 @@
 
 - 数组
     - 数组是一种效率最高的存储和随机访问对象引用序列的方式
-        - [ ] [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-%E6%95%B0%E7%BB%84.md)
+    - [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-%E6%95%B0%E7%BB%84.md)
         - [ ] 数组初始化
         - [ ] [ ] —— 访问数组中的元素
         - [ ] length  —— 访问数组的长度（注意是数组的大小，不是实际保存的元素个数）
@@ -196,16 +197,11 @@
     - [ ] 事务
         
         
-- 其他
-    - [ ] Linux 常见命令
-    - [ ] 常用sql
-    - [ ] 事务
-    - [ ] 线程池
-    - [ ] 乐观锁
-    - [ ] 悲观锁
-    - [ ] git常用命令
-    - [ ] redis 常用命令
-    - [ ] es常用命令
+- [ ] Linux 常见命令
+- [ ] 常用sql
+- [ ] git常用命令
+- [ ] redis 常用命令
+- [ ] es常用命令
 
 ## Spring 原理
 
@@ -234,6 +230,14 @@
     
 - Spring IOC 原理
 
+## MyBatis 
+
+- 知识点
+    - [ ] #{} 和 ${} 的区别是什么？ 
+    - [ ] 实体类中的属性名和表中字段名不一样
+        
+        
+    
         
         
 ## 测试相关的知识

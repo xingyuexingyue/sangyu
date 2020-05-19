@@ -1,10 +1,3 @@
-## 语言选择
-
-目前大多数公司的开发语言都是 Java，推荐选择 Java
-
-- [ ] Java
-- [ ] Python
-
 ## Java 基础 
 
 - Java 集合

@@ -5,7 +5,24 @@
         - [ ] Collection 接口，List、Set、Queue 的最基本的接口
         - [ ] Iterator 迭代器 实现迭代器遍历集合中的元素
         - [ ] Map 映射表的基础接口
-
+   
+    - 工具类 ：
+        - java.util.Collections
+            - fill() 填充容器，只能条换不能添加新元素 [代码位置]()
+            - nCopies() 填充容器 [代码位置]()
+    - Collection 的功能方法 [代码位置]()
+        - add() 添加元素
+        - addAll() 添加全部元素
+        - contains() 判断容器中是否存在某元素
+        - containsAll() 判断容器中是否包含另一个容器中的所有元素
+        - isEmpty() 判断是否包含元素
+        - iterator() 返回一个Iterator对象，遍历容器中的元素
+        - remove() 移除元素
+        - removeAll() 移除所有元素
+        - clear() 移除所有元素
+        - size() 长度
+        - toArray() 返回一个数组
+        - 
 - Java 并发
     - [代码位置]()
     - 线程实现 / 创建方式

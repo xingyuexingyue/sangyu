@@ -188,7 +188,7 @@
     - [ ] 获得 key 的集合 `hashMap.keySet()`
     - [ ] 获得 key-value 的集合 `hashMap.entrySet();`
     - [ ] 替换 key 的 value `hashMap.replace("ff".5);`
-    - [ ] [元素遍历](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-HashMap.md)   
+    - [ ] 元素遍历 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-Map.md)
 
 
 ## 排序

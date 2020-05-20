@@ -1,58 +1,79 @@
 ## Java 基础 
 
-- Java 集合
-    - java.util 包中存放集合类，有3种：set、list（包含queue）和 map
-        - [ ] Collection 接口，List、Set、Queue 的最基本的接口
-        - [ ] Iterator 迭代器 实现迭代器遍历集合中的元素
-        - [ ] Map 映射表的基础接口
-   
-    - 工具类 ：
-        - java.util.Collections
-            - fill() 填充容器，只能条换不能添加新元素 [代码位置]()
-            - nCopies() 填充容器 [代码位置]()
-    - Collection 的功能方法 [代码位置]()
-        - add() 添加元素
-        - addAll() 添加全部元素
-        - contains() 判断容器中是否存在某元素
-        - containsAll() 判断容器中是否包含另一个容器中的所有元素
-        - isEmpty() 判断是否包含元素
-        - iterator() 返回一个Iterator对象，遍历容器中的元素
-        - remove() 移除元素
-        - removeAll() 移除所有元素
-        - clear() 移除所有元素
-        - size() 长度
-        - toArray() 返回一个数组
-        - 
+- Java 容器
+    - [ ] Collection 接口，List、Set、Queue 的最基本的接口
+    - [ ] Iterator 迭代器 实现迭代器遍历集合中的元素 [代码位置]()
+    - [ ] Map 映射表的基础接口
+
+    - java.util.Collections
+        - [ ] fill() 填充容器，只能条换不能添加新元素 [代码位置]()
+        - [ ] nCopies() 填充容器 [代码位置]()
+        
+    - java.util.Collection [代码位置]()
+        - [ ] add() 添加元素
+        - [ ] addAll() 添加全部元素
+        - [ ] contains() 判断容器中是否存在某元素
+        - [ ] containsAll() 判断容器中是否包含另一个容器中的所有元素
+        - [ ] isEmpty() 判断是否包含元素
+        - [ ] iterator() 返回一个Iterator对象，遍历容器中的元素
+        - [ ] remove() 移除元素
+        - [ ] removeAll() 移除所有元素
+        - [ ] clear() 移除所有元素
+        - [ ] size() 长度
+        - [ ] toArray() 返回一个数组
+        
+    - Map [代码位置]()
+        - [ ] size()
+        - [ ] isEmpty()
+        - [ ] containsKey(Object key)
+        - [ ] containsValue(Object value)
+        - [ ] get(Object key)
+        - [ ] put(K key, V value)
+        - [ ] remove(Object key)
+        - [ ] putAll(Map<? extends K, ? extends V> m)
+        - [ ] clear()
+        - [ ] keySet()
+        - [ ] Collection<V> values()
+        - [ ] Set<Map.Entry<K, V>> entrySet()       
+        
+    - 其他 
+        - [ ] for 和 foreach 区别 [代码位置]()
+        - [ ] equals 和 == 区别 [代码位置]()
+
 - Java 并发
-    - [代码位置]()
-    - 线程实现 / 创建方式
+    - 线程的创建方式 [代码位置]()
         - [ ] 继承 Thread 类
         - [ ] 实现 Runnable 接口
-        - [ ] 实现 Callable 接口 
-    - 线程池的方式 ExecutorService
-        - [ ] newCachedThreadPool  
-        - [ ] newFixedThreadPool 
-        - [ ] newScheduledThreadPool 
-        - [ ] newSingleThreadExecutor 
-    - 线程生命周期
+        - [ ] 实现 Callable 接口
+        - [ ] 线程池的方式 ExecutorService
+            - newCachedThreadPool \ newFixedThreadPool \ newScheduledThreadPool \ newSingleThreadExecutor 
+    - 线程生命周期 [代码位置]()
         - [ ] 新建状态（ new ）
         - [ ] 就绪状态 ( Runnable ）
         - [ ] 运行状态（ Running ）
         - [ ] 阻塞状态（ Blocked ）
         - [ ] 线程死亡（ Dead )
-    - 终止线程4种方式
-    - sleep 与 wait 区别
-    - start 与 run 区别
-    - Synchronized 同步锁
-    - 线程基本方法
-        - [ ] 线程等待 wait
-        - [ ] 线程睡眠 sleep
-        - [ ] 线程让步 yield
-        - [ ] 线程中断 interrupt
-        - [ ] 线程等待 Join
-        - [ ] 线程唤醒 notify
-    - volatile 关键字的作用
-
+    - 线程的优先级 [代码位置]()
+    - 其他
+        - [ ] 为某个对象加锁
+        - [ ] this 加锁
+        - [ ] 执行代码的时候锁定当前对象
+        - [ ] 锁定静态方法
+        - [ ] 线程重入的问题
+        - [ ] 同步方法和非同步方法是否可以同时调用
+        - [ ] 对业务方法加锁
+        - [ ] 子类调用父类的同步方法
+        - [ ] 出现异常时，锁释放
+        - [ ] volatile
+        - [ ] 使用 synchronized 和 volatile 的区别
+        - [ ] 使用 synchronized 解决 上面的问题
+        - [ ] 使用 AtomXXX 类
+        - [ ] 避免将锁定对象改为另一个对象
+        - [ ] 不要以字符串作为锁的对象
+        - [ ] 曾经的面试题
+        - [ ] 使用 wait 和 notify
+        - [ ] 使用 await 和 countdown
+        
 - Java 异常
     - [ ] Throwable、Error、Exception、RuntimeException
     - [ ] Throw 和 throws 的区别

@@ -1,7 +1,7 @@
 ```java
 public class MyTest {
     public static void main(String[] args) {
-        List<Integer> list = new ArrayList<Integer>();
+        Collection<Integer> list = new ArrayList<Integer>();
         for (int i = 10; i >= 0; i--) {
             list.add(i); // add() 添加元素
         }

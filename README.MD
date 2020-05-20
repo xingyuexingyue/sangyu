@@ -117,11 +117,11 @@
     - [ ] 如何格式化日期 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/07.%E6%97%B6%E9%97%B4.md#%E5%A6%82%E4%BD%95%E6%A0%BC%E5%BC%8F%E5%8C%96%E6%97%A5%E6%9C%9F)
     - [ ] 打印昨天的当前时刻 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/07.%E6%97%B6%E9%97%B4.md#%E6%89%93%E5%8D%B0%E6%98%A8%E5%A4%A9%E7%9A%84%E5%BD%93%E5%89%8D%E6%97%B6%E5%88%BB)
 
-
 - 其他
     - [ ] 浅拷贝和深拷贝 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/01-%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D.md)
     - [ ] awaitility [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/03-awaitility.md)
 
+        
       
 ## 数据结构
 
@@ -195,13 +195,22 @@
 
 - 实现各种排序 & 知道每种排序的最坏、最好和平均的复杂度分别是什么场景:
 - 不要用冒泡排序 
-    - [ ] 选择排序 [代码位置]()
-    - [ ] 冒泡排序 [代码位置]()
-    - [ ] 插入排序 [代码位置]()
-    - [ ] 希尔排序 [代码位置]()
-    - [ ] 归并排序 [代码位置]()
-    - [ ] 快排 [代码位置]()
-    
+    - [ ] 选择排序 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E7%AE%97%E6%B3%95/01-%E9%80%89%E6%8B%A9%E6%8E%92%E5%BA%8F.md)
+    - [ ] 冒泡排序 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E7%AE%97%E6%B3%95/02-%E5%86%92%E6%B3%A1%E6%8E%92%E5%BA%8F.md)
+    - [ ] 插入排序 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E7%AE%97%E6%B3%95/03-%E6%8F%92%E5%85%A5%E6%8E%92%E5%BA%8F.md)
+    - [ ] 希尔排序 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E7%AE%97%E6%B3%95/04-%E5%B8%8C%E5%B0%94%E6%8E%92%E5%BA%8F.md)
+    - [ ] 归并排序 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E7%AE%97%E6%B3%95/05-%E5%BD%92%E5%B9%B6%E6%8E%92%E5%BA%8F.md)
+    - [ ] 快排 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E7%AE%97%E6%B3%95/06-%E5%BF%AB%E6%8E%92.md)
+
+## 设计模式
+
+- 设计模式七大原则
+    - [ ] 单一职责原则 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/00-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md#%E5%8D%95%E4%B8%80%E8%81%8C%E8%B4%A3%E5%8E%9F%E5%88%99)
+    - [ ] 接口隔离规则 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/00-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md#%E6%8E%A5%E5%8F%A3%E9%9A%94%E7%A6%BB%E8%A7%84%E5%88%99)
+    - [ ] 依赖倒转原则 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/00-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md#%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99)
+    - [ ] 里氏替换原则 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/00-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99)
+    - [ ] 迪米特法则 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/00-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md#%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99)
+     
     
 ## 其他知识
 
@@ -221,8 +230,7 @@
     
 - HTTPS
     - [ ] 在 HTTP 上增加了 SSL 层，端口号是443
-      
-    
+   
 ## Spring 
 
 - 常用注解

@@ -1,15 +1,15 @@
 ## Java 基础 
 
 - Java 容器
-    - [ ] Collection 接口
-    - [ ] Iterator 迭代器 [代码位置]()
-    - [ ] Map 映射表的基础接口
+    - [ ] [Collection 接口](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/01-Collection%E6%8E%A5%E5%8F%A3%E6%8F%90%E4%BE%9B%E7%9A%84%E6%96%B9%E6%B3%95.md)
+    - [ ] [Iterator 迭代器 ](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/017-%E8%BF%AD%E4%BB%A3%E5%99%A8%20Iterator.md)
+    - [ ] [Map 映射表的基础接口](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-Map.md)
 
     - java.util.Collections
-        - [ ] fill() 填充容器，只能条换不能添加新元素 [代码位置]()
-        - [ ] nCopies() 填充容器 [代码位置]()
+        - [ ] fill() 填充容器，只能条换不能添加新元素 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/02-Collections%E7%94%A8%E6%B3%95.md#collectionsncopies-%E7%94%A8%E6%B3%95)
+        - [ ] nCopies() 填充容器 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/02-Collections%E7%94%A8%E6%B3%95.md#collectionsfill-%E7%94%A8%E6%B3%95)
         
-    - java.util.Collection [代码位置]()
+    - java.util.Collection [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/01-Collection%E6%8E%A5%E5%8F%A3%E6%8F%90%E4%BE%9B%E7%9A%84%E6%96%B9%E6%B3%95.md)
         - [ ] add() 添加元素
         - [ ] addAll() 添加全部元素
         - [ ] contains() 判断容器中是否存在某元素
@@ -22,7 +22,7 @@
         - [ ] size() 长度
         - [ ] toArray() 返回一个数组
         
-    - Map [代码位置]()
+    - Map [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-Map.md)
         - [ ] size()
         - [ ] isEmpty()
         - [ ] containsKey(Object key)
@@ -37,8 +37,8 @@
         - [ ] Set<Map.Entry<K, V>> entrySet()       
         
     - 其他 
-        - [ ] for 和 foreach 区别 [代码位置]()
-        - [ ] equals 和 == 区别 [代码位置]()
+        - [ ] for 和 foreach 区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/05-for%E5%92%8Cforeach%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+        - [ ] equals 和 == 区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/06-equals()%E6%96%B9%E6%B3%95.md)
 
 - Java 并发
     - 线程的创建方式 
@@ -53,7 +53,7 @@
         - [ ] 运行状态（ Running ）
         - [ ] 阻塞状态（ Blocked ）
         - [ ] 线程死亡（ Dead )
-    - 线程的优先级 [代码位置]()
+    - 线程的优先级 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/021-%E8%AE%BE%E7%BD%AE%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7.md)
         - [ ] getPriority() 读线程的优先级
         - [ ] setPriority() 修改线程优先级
     - 线程基本方法 [代码位置]()
@@ -64,36 +64,42 @@
         - [ ] join()
         - [ ] yield()
     - 加锁相关 
-        - [ ] 为某个对象加锁 [代码位置]()
-        - [ ] this 加锁 [代码位置]()
-        - [ ] 执行代码的时候锁定当前对象 [代码位置]()
-        - [ ] 锁定静态方法 [代码位置]()
-        - [ ] 线程重入的问题 [代码位置]()
-        - [ ] 同步方法和非同步方法是否可以同时调用 [代码位置]()
-        - [ ] 对业务方法加锁 [代码位置]()
-        - [ ] 子类调用父类的同步方法 [代码位置]()
-        - [ ] 出现异常时，锁释放 [代码位置]()
-        - [ ] volatile [代码位置]()
-        - [ ] 使用 synchronized 和 volatile 的区别 [代码位置]()
-        - [ ] 使用 synchronized 解决 上面的问题 [代码位置]()
-        - [ ] 使用 AtomXXX 类 [代码位置]()
-        - [ ] 避免将锁定对象改为另一个对象 [代码位置]()
-        - [ ] 不要以字符串作为锁的对象 [代码位置]()
-        - [ ] 曾经的面试题 [代码位置]()
-        - [ ] 使用 wait 和 notify [代码位置]()
-        - [ ] 使用 await 和 countdown [代码位置]()
+        - [ ] 为某个对象加锁 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/01-%E4%B8%BA%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%8A%A0%E9%94%81.md)
+        - [ ] this 加锁 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/02-this%E5%8A%A0%E9%94%81.md)
+        - [ ] 执行代码的时候锁定当前对象 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/03-%E6%89%A7%E8%A1%8C%E4%BB%A3%E7%A0%81%E7%9A%84%E6%97%B6%E5%80%99%E9%94%81%E5%AE%9A%E5%BD%93%E5%89%8D%E5%AF%B9%E8%B1%A1.md)
+        - [ ] 锁定静态方法 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/04-%E9%94%81%E5%AE%9A%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95.md)
+        - [ ] 线程重入的问题 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/05-%E7%BA%BF%E7%A8%8B%E9%87%8D%E5%85%A5%E7%9A%84%E9%97%AE%E9%A2%98.md)
+        - [ ] 同步方法和非同步方法是否可以同时调用 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/06-%20%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95%E5%92%8C%E9%9D%9E%E5%90%8C%E6%AD%A5%E6%96%B9%E5%BC%8F%E6%98%AF%E5%90%A6%E5%8F%AF%E4%BB%A5%E5%90%8C%E6%97%B6%E8%B0%83%E7%94%A8.md)
+        - [ ] 对业务方法加锁 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/07-%E5%AF%B9%E4%B8%9A%E5%8A%A1%E6%96%B9%E6%B3%95%E5%8A%A0%E9%94%81.md)
+        - [ ] 子类调用父类的同步方法 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/09-%E5%AD%90%E7%B1%BB%E8%B0%83%E7%94%A8%E7%88%B6%E7%B1%BB%E7%9A%84%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95.md)
+        - [ ] 一个同步方法是不是可以调用另一个同步方法.md [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/08-%20%E4%B8%80%E4%B8%AA%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95%E6%98%AF%E4%B8%8D%E6%98%AF%E5%8F%AF%E4%BB%A5%E8%B0%83%E7%94%A8%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%90%8C%E6%AD%A5%E6%96%B9%E6%B3%95.md)
+        - [ ] 出现异常时，锁释放 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/010-%E5%87%BA%E7%8E%B0%E5%BC%82%E5%B8%B8%E6%97%B6%EF%BC%8C%E9%94%81%E9%87%8A%E6%94%BE.md)
+        - [ ] volatile [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/011-volatile.md)
+        - [ ] 使用 synchronized 和 volatile 的区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/012-%E4%BD%BF%E7%94%A8synchronized%20%E5%92%8Cvolatile%E7%9A%84%E5%8C%BA%E5%88%AB.md)
+        - [ ] 使用 synchronized 解决 上面的问题 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/013-%E4%BD%BF%E7%94%A8Synchronized%E8%A7%A3%E5%86%B3012%E7%9A%84%E9%97%AE%E9%A2%98.md)
+        - [ ] 使用 AtomXXX 类 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/014-%E4%BD%BF%E7%94%A8AtomXXX%E7%B1%BB.md)
+        - [ ] 避免将锁定对象改为另一个对象 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/016-%E9%81%BF%E5%85%8D%E5%B0%86%E9%94%81%E5%AE%9A%E5%AF%B9%E8%B1%A1%E6%94%B9%E4%B8%BA%E5%8F%A6%E4%B8%80%E4%B8%AA%E5%AF%B9%E8%B1%A1.md)
+        - [ ] synchronized优化.md [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/015-synchronized%E4%BC%98%E5%8C%96.md)
+        - [ ] 不要以字符串作为锁的对象 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/017-%E4%B8%8D%E8%A6%81%E4%BB%A5%E5%AD%97%E7%AC%A6%E4%B8%B2%E4%BD%9C%E4%B8%BA%E9%94%81%E7%9A%84%E5%AF%B9%E8%B1%A1.md)
+        - [ ] 曾经的面试题 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/018-%E6%9B%BE%E7%BB%8F%E7%9A%84%E9%9D%A2%E8%AF%95%E9%A2%98.md)
+        - [ ] 使用 wait 和 notify [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/019-%E4%BD%BF%E7%94%A8wait%E5%92%8Cnotify.md)
+        - [ ] 使用 await 和 countdown [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/020-%E4%BD%BF%E7%94%A8await%E5%92%8Ccountdown.md)
     - 其他
-        - [ ] sleep() 与 wait() 区别 [代码位置]()
+        - [ ] sleep() 与 wait() 区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/023-%E5%85%B6%E4%BB%96.md#sleep-%E4%B8%8E-wait-%E5%8C%BA%E5%88%AB)
+        - [ ] start() 与 run() 区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/023-%E5%85%B6%E4%BB%96.md#start-%E4%B8%8E-run-%E5%8C%BA%E5%88%AB)
+        - [ ] 为什么使用 Exextor 框架 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/023-%E5%85%B6%E4%BB%96.md#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8-exextor-%E6%A1%86%E6%9E%B6)
+        - [ ] Executor 和 Executors 区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/023-%E5%85%B6%E4%BB%96.md#executor-%E5%92%8C-executors-%E5%8C%BA%E5%88%AB)
         
         
         
 - Java 异常
-    - [ ] 异常的抛出 [代码位置]()
-    - [ ] 异常的分类 [代码位置]()
-    - [ ] Throw 和 throws 的区别 [代码位置]()
-    - [ ] 自定义异常 [代码位置]()
-    
-
+    - [ ] 异常的抛出 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/6-%E5%BC%82%E5%B8%B8/00-%E5%BC%82%E5%B8%B8.md)
+    - [ ] 异常的分类 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/6-%E5%BC%82%E5%B8%B8/00-%E5%BC%82%E5%B8%B8.md#%E5%BC%82%E5%B8%B8%E7%9A%84%E5%88%86%E7%B1%BB)
+    - [ ] Throw 和 throws 的区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/6-%E5%BC%82%E5%B8%B8/00-%E5%BC%82%E5%B8%B8.md#throw-%E5%92%8C-throws-%E7%9A%84%E5%8C%BA%E5%88%AB)
+    - [ ] 自定义异常 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/6-%E5%BC%82%E5%B8%B8/00-%E5%BC%82%E5%B8%B8.md#%E8%87%AA%E5%AE%9A%E4%B9%89%E5%BC%82%E5%B8%B8)
+    - [ ] 异常的捕获和处理 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/6-%E5%BC%82%E5%B8%B8/00-%E5%BC%82%E5%B8%B8.md#%E5%BC%82%E5%B8%B8%E7%9A%84%E6%8D%95%E8%8E%B7%E5%92%8C%E5%A4%84%E7%90%86)
+    - [ ] Error 和 Exception 的区别？[代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/6-%E5%BC%82%E5%B8%B8/00-%E5%BC%82%E5%B8%B8.md#error-%E5%92%8C-exception-%E7%9A%84%E5%8C%BA%E5%88%AB)
+    - [ ] try{} 里有一个 return 语句，那么紧跟在这个 try 后的 finally{} 里的代码会不会被执行，什么时候被执行，在 return 前还是后？[代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/6-%E5%BC%82%E5%B8%B8/00-%E5%BC%82%E5%B8%B8.md#try-%E9%87%8C%E6%9C%89%E4%B8%80%E4%B8%AA-return-%E8%AF%AD%E5%8F%A5%E9%82%A3%E4%B9%88%E7%B4%A7%E8%B7%9F%E5%9C%A8%E8%BF%99%E4%B8%AA-try-%E5%90%8E%E7%9A%84-finally-%E9%87%8C%E7%9A%84%E4%BB%A3%E7%A0%81%E4%BC%9A%E4%B8%8D%E4%BC%9A%E8%A2%AB%E6%89%A7%E8%A1%8C%E4%BB%80%E4%B9%88%E6%97%B6%E5%80%99%E8%A2%AB%E6%89%A7%E8%A1%8C%E5%9C%A8-return-%E5%89%8D%E8%BF%98%E6%98%AF%E5%90%8E)
 - 其他
     - [ ] 浅拷贝和深拷贝 [代码位置]()
     

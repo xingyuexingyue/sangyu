@@ -41,13 +41,13 @@
         - [ ] equals 和 == 区别 [代码位置]()
 
 - Java 并发
-    - 线程的创建方式 [代码位置]()
-        - [ ] 继承 Thread 类
-        - [ ] 实现 Runnable 接口
-        - [ ] 实现 Callable 接口
-        - [ ] 线程池的方式 ExecutorService
+    - 线程的创建方式 
+        - [ ] 继承 Thread 类 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/00-%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F.md#%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F%E7%AC%AC%E4%B8%80%E7%A7%8D%E7%BB%A7%E6%89%BF-thread-%E7%B1%BB)
+        - [ ] 实现 Runnable 接口 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/00-%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F.md#%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F%E7%AC%AC%E4%BA%8C%E7%A7%8D%E5%AE%9E%E7%8E%B0-runnable-%E6%8E%A5%E5%8F%A3)
+        - [ ] 实现 Callable 接口 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/00-%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F.md#%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F%E7%AC%AC%E4%B8%89%E7%A7%8D%E5%AE%9E%E7%8E%B0-callable-%E6%8E%A5%E5%8F%A3-%E6%9C%89%E8%BF%94%E5%9B%9E%E5%80%BC)
+        - [ ] 线程池的方式 ExecutorService [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/00-%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F.md#%E7%BA%BF%E7%A8%8B%E5%88%9B%E5%BB%BA%E6%96%B9%E5%BC%8F%E7%AC%AC%E5%9B%9B%E7%A7%8D%E7%BA%BF%E7%A8%8B%E6%B1%A0%E7%9A%84%E6%96%B9%E5%BC%8F-executorservice)
             - newCachedThreadPool \ newFixedThreadPool \ newScheduledThreadPool \ newSingleThreadExecutor 
-    - 线程生命周期 [代码位置]()
+    - 线程生命周期 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/022-%E7%BA%BF%E7%A8%8B%E7%9A%84%E7%94%9F%E5%91%BD%E5%91%A8%E6%9C%9F.md)
         - [ ] 新建状态（ new ）
         - [ ] 就绪状态 ( Runnable ）
         - [ ] 运行状态（ Running ）

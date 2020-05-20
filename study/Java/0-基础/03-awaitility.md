@@ -1,13 +1,13 @@
 ## 1.背景
 在编写自动化测试用例过程中，往往会遇见被测代码有异步或者队列处理的中间过程；如果需要校验这部分结果，必须等待异步操作结束或队列消费完，而这个中间等待的时间是不确定的，常常是根据经验值设定，通过Thread.sleep(经验值)，而这个时间通常会设置成最长的那次时间，但是可能99%次这个异步操作都低于这个最长的时间，这就造成了每次执行这个测试用例都花费了异步任务最长的那次时间。
 
-现介绍一款开源工具awaitility: [地址](https://github.com/awaitility/awaitility)，该工具提供轮询的方式，判断操作是否完成，以最短的时间获取异步任务结果。
+现介绍一款开源工具 awaitility: [地址](https://github.com/awaitility/awaitility)，该工具提供轮询的方式，判断操作是否完成，以最短的时间获取异步任务结果。
 
 ## 2.入门
 
-awaitility支持Java、Scala、Groovy，本文以Java介绍。
+awaitility 支持 Java、Scala、Groovy，本文以 Java 介绍。
 
-maven工程在pom.xml添加awaitility依赖：
+maven 工程在 pom.xml 添加 awaitility 依赖：
 
 ```
 <dependency>
@@ -19,6 +19,7 @@ maven工程在pom.xml添加awaitility依赖：
 ```
 
 其他方式，请参考：
+
 https://github.com/awaitility/awaitility/wiki/Getting_started
 
 ## 3.实例
@@ -61,7 +62,7 @@ class CounterServiceImpl implements CounterService {
 
 #### 3.1 默认等待时间
 
-await().until(Callable conditionEvaluator)最多等待10s直到conditionEvaluator满足条件，否则ConditionTimeoutException。
+await().until(Callable conditionEvaluator) 最多等待10s直到 conditionEvaluator 满足条件，否则 ConditionTimeoutException。
 
 ```java
 public class MyTest {
@@ -89,12 +90,12 @@ public class MyTest {
 }
 ```
 
-默认超时时间为10s, 可通过setDefaultTimeout()自定义默认超时时间
+默认超时时间为10s, 可通过 setDefaultTimeout() 自定义默认超时时间
 
 
 #### 3.2 最多等待
 
-await().atMost() 设置最多等待时间，如果在这时间内条件还不满足，将抛出ConditionTimeoutException
+await().atMost() 设置最多等待时间，如果在这时间内条件还不满足，将抛出 ConditionTimeoutException
 
 ```java
 public class MyTest {
@@ -123,7 +124,7 @@ public class MyTest {
 
 #### 3.3 至少等待
 
-await().atLeast() 设置至少等待时间；多个条件时候用and()连接
+await().atLeast() 设置至少等待时间；多个条件时候用 and() 连接
 
 ```java
 public class MyTest {
@@ -156,7 +157,7 @@ public class MyTest {
 
 #### 3.4 forever等待
 
-forever等待，不推荐使用，可能导致死循环
+forever 等待，不推荐使用，可能导致死循环
 
 ```java
 public class MyTest {
@@ -212,7 +213,7 @@ public class MyTest {
 
 #### 3.6 Fibonacci轮询
 
-with().pollInterval(fibonacci(SECONDS))非线性轮询，按照fibonacci数轮询
+with().pollInterval(fibonacci(SECONDS)) 非线性轮询，按照 fibonacci 数轮询
 
 ```java
 public class MyTest {

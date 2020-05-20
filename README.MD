@@ -157,8 +157,7 @@
             - 若数组的大小到达其容积，则变大一倍
             - 获取元素后，若数组大小为其容积的1/4，则缩小一半
 - 栈 
-    - [ ] 先进后出 
-    - [ ] [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/08-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%A0%88.md)
+    - [ ] 先进后出 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/08-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%A0%88.md)
 
 - 队列
     - [ ] 先进先出 有序
@@ -210,7 +209,9 @@
     - [ ] 依赖倒转原则 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/00-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md#%E4%BE%9D%E8%B5%96%E5%80%92%E8%BD%AC%E5%8E%9F%E5%88%99)
     - [ ] 里氏替换原则 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/00-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md#%E9%87%8C%E6%B0%8F%E6%9B%BF%E6%8D%A2%E5%8E%9F%E5%88%99)
     - [ ] 迪米特法则 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/00-%E8%AE%BE%E8%AE%A1%E5%8E%9F%E5%88%99.md#%E8%BF%AA%E7%B1%B3%E7%89%B9%E6%B3%95%E5%88%99)
-     
+- 设计模式
+    - 单例模式（双检查）[代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/01-%E5%8D%95%E4%BE%8B%E6%A8%A1%E5%BC%8F(%E5%8F%8C%E6%A3%80%E6%9F%A5).md)
+    - 工厂模式 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/02-%E5%B7%A5%E5%8E%82%E6%A8%A1%E5%BC%8F.md)
     
 ## 其他知识
 

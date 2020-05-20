@@ -216,9 +216,9 @@
 ## 其他知识
 
 - 递归（Recursion）
-    - [ ] 计算阶乘 [代码位置]()
-    - [ ] 斐波拉契数列 [代码位置]()
-    - [ ] 爬楼梯 [代码位置]()  
+    - [ ] 计算阶乘 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/06-%E9%80%92%E5%BD%92.md#%E8%AE%A1%E7%AE%97%E9%98%B6%E4%B9%98)
+    - [ ] 斐波拉契数列 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/06-%E9%80%92%E5%BD%92.md#%E6%96%90%E6%B3%A2%E6%8B%89%E5%A5%91%E6%95%B0%E5%88%97)
+    - [ ] 爬楼梯 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/06-%E9%80%92%E5%BD%92.md#%E7%88%AC%E6%A5%BC%E6%A2%AF)  
             
 - TCP / IP
     - [ ] 模型：访问层、网络层、传输层、应用层

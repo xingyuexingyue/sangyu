@@ -1,8 +1,8 @@
 ## Java 基础 
 
 - Java 容器
-    - [ ] Collection 接口，List、Set、Queue 的最基本的接口
-    - [ ] Iterator 迭代器 实现迭代器遍历集合中的元素 [代码位置]()
+    - [ ] Collection 接口
+    - [ ] Iterator 迭代器 [代码位置]()
     - [ ] Map 映射表的基础接口
 
     - java.util.Collections

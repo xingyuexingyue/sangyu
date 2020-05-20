@@ -1,9 +1,9 @@
 ## Java 基础 
 
 - Java 容器
-    - [ ] [Collection 接口](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/01-Collection%E6%8E%A5%E5%8F%A3%E6%8F%90%E4%BE%9B%E7%9A%84%E6%96%B9%E6%B3%95.md)
+    - [ ] Collection 接口
     - [ ] [Iterator 迭代器 ](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/017-%E8%BF%AD%E4%BB%A3%E5%99%A8%20Iterator.md)
-    - [ ] [Map 映射表的基础接口](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-Map.md)
+    - [ ] Map 映射表的基础接口
 
     - java.util.Collections
         - [ ] fill() 填充容器，只能条换不能添加新元素 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/02-Collections%E7%94%A8%E6%B3%95.md#collectionsncopies-%E7%94%A8%E6%B3%95)

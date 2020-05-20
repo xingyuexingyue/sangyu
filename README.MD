@@ -225,7 +225,7 @@
     
 ## Spring 
 
-- [ ] 常用注解
+- 常用注解
     - [ ] @Controller 标注控制层组件 分发处理器将会扫描使用了这个注解的类里的方法，并检测方法是否使用了@RequestMapping注解
     - [ ] @RestController @Controller 和 @responseBody 组合
     - [ ] @Component 通用组件，表示这个类被 Spring 管理

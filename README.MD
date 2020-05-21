@@ -89,7 +89,7 @@
         - [ ] start() 与 run() 区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/023-%E5%85%B6%E4%BB%96.md#start-%E4%B8%8E-run-%E5%8C%BA%E5%88%AB)
         - [ ] 为什么使用 Exextor 框架 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/023-%E5%85%B6%E4%BB%96.md#%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8-exextor-%E6%A1%86%E6%9E%B6)
         - [ ] Executor 和 Executors 区别 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/023-%E5%85%B6%E4%BB%96.md#executor-%E5%92%8C-executors-%E5%8C%BA%E5%88%AB)
-        
+        - [ ] 为什么 wait()、notify()、notifyAll() 这些方法不在 thread 类里面
         
         
 - Java 异常

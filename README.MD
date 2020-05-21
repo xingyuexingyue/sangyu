@@ -352,31 +352,31 @@
 
 ## 相关课程视频资源
 
-- [ ] [Dubbo ](https://www.bilibili.com/video/av62353311/?pikaqiu)
+- [ ] [Dubbo（视频）](https://www.bilibili.com/video/av62353311/?pikaqiu)
 
-- [ ] [Spring ](https://www.bilibili.com/video/av59570922/?pikaqiu)
+- [ ] [Spring（视频）](https://www.bilibili.com/video/av59570922/?pikaqiu)
 
-- [ ] [SpringMVC ](https://www.bilibili.com/video/av59567541/?pikaqiu)
+- [ ] [SpringMVC（视频）](https://www.bilibili.com/video/av59567541/?pikaqiu)
 
-- [ ] [SpringBoot ](https://www.bilibili.com/video/av59572480/?pikaqiu)
+- [ ] [SpringBoot（视频）](https://www.bilibili.com/video/av59572480/?pikaqiu)
 
-- [ ] [MyBatis ](https://www.bilibili.com/video/av59564271/?pikaqiu)
+- [ ] [MyBatis（视频）](https://www.bilibili.com/video/av59564271/?pikaqiu)
 
-- [ ] [rocketmq](https://www.bilibili.com/video/av11074519)
+- [ ] [rocketmq（视频）](https://www.bilibili.com/video/av11074519)
 
-- [ ] [RabbitMQ](https://www.imooc.com/learn/1042)
+- [ ] [RabbitMQ（视频）](https://www.imooc.com/learn/1042)
 
-- [ ] [消息队列 Kafka ]()
+- [ ] [消息队列 Kafka（视频）]()
 
-- [ ] [Redis入门](https://www.imooc.com/learn/839)
+- [ ] [Redis入门（视频）](https://www.imooc.com/learn/839)
 
-- [ ] [MySQL](https://www.bilibili.com/video/av59623481/?pikaqiu)
+- [ ] [MySQL（视频）](https://www.bilibili.com/video/av59623481/?pikaqiu)
 
-- [ ] [Elasticsearch](https://www.bilibili.com/video/av59628430/?pikaqiu)
+- [ ] [Elasticsearch（视频）](https://www.bilibili.com/video/av59628430/?pikaqiu)
 
-- [ ] [Git](https://www.bilibili.com/video/av59634634/?pikaqiu)
+- [ ] [Git（视频）](https://www.bilibili.com/video/av59634634/?pikaqiu)
 
-- [ ] [Nginx](https://www.bilibili.com/video/av59639498/?pikaqiu)
+- [ ] [Nginx（视频）](https://www.bilibili.com/video/av59639498/?pikaqiu)
 
 - [ ] [单链表实现（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=16) 
 
@@ -386,5 +386,6 @@
     
 - [ ] [使用数组实现队列（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=10)
 
-- [ ] [使用数组实现栈（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=30)   
+- [ ] [使用数组实现栈（视频）](https://www.bilibili.com/video/BV16t411g7wa?p=30)  
+ 
 - [ ] [使用数组实现环形队列](https://www.bilibili.com/video/BV16t411g7wa?p=10)     

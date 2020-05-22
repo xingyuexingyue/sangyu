@@ -128,45 +128,54 @@
 - 数组
     - 数组是一种效率最高的存储和随机访问对象引用序列的方式
     - [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/015-%E6%95%B0%E7%BB%84.md)
-        - [ ] 数组初始化
+        - [ ] 数组初始化三种方式
         - [ ] [ ] —— 访问数组中的元素
         - [ ] length  —— 访问数组的长度（注意是数组的大小，不是实际保存的元素个数）
+    - Arrays 库提供了一些方法可以操作数组
         - [ ] Arrays.toString() —— 将数组转换为String
         - [ ] Arrays.fill() —— 给数组填充值
         - [ ] Arrays.equals() —— 比较两个数组是否相等；相等的条件是：元素个数必须相等，并且对应位置的元素也相等
         - [ ] Arrays.sort() —— 数组排序
-        - [ ] Arrays.binarySearch() —— 在排好序的数组中查找元素
-        - [ ] System.arraycopy() —— 复制数组；参数：源数组，从源数组什么位置开始复制，目标数组，从什么位置开始复制，需要复制的个数
-        - [ ] Arrays.asList() —— 接收一个数组或是一个用逗号分隔的元素列表（使用可变参数），并将其转为一个List对象    
+        - [ ] Arrays.asList() —— 接收一个数组或是一个用逗号分隔的元素列表（使用可变参数），并将其转为一个List对象
+    - 复制数组
+        - [ ] System.arraycopy() —— 参数：源数组，从源数组什么位置开始复制，目标数组，从什么位置开始复制，需要复制的个数
+    
 
 - 动态数组
     - 实现一个可自动调整大小的动态数组
     - [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/011-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AAArrayList.md)
-        - [ ] size() —— 数组元素的个数
-        - [ ] capacity() —— 可容纳元素的个数
-        - [ ] is_empty()
-        - [ ] at(index) —— 返回对应索引的元素，索引越界报错
-        - [ ] push(item)
-        - [ ] insert(index, item) —— 在指定索引中插入元素，并把后面的元素依次后移
-        - [ ] prepend(item) —— 可以使用上面的 insert 函数，传参 index 为 0
-        - [ ] pop() —— 删除在数组末端的元素，并返回其值
-        - [ ] delete(index) —— 删除指定索引的元素，并把后面的元素依次前移
-        - [ ] remove(item) —— 删除指定值的元素，并返回其索引（即使有多个元素）
-        - [ ] find(item) —— 寻找指定值的元素并返回其中第一个出现的元素其索引，若未找到则返回 -1
-        - [ ] resize(new_capacity) // 私有函数
-            - 若数组的大小到达其容积，则变大一倍
-            - 获取元素后，若数组大小为其容积的1/4，则缩小一半
+        - [ ] size() —— 当前容器内的个数
+        - [ ] add(Object o) —— 在容器末尾添加数据
+        - [ ] add(int index, Object o) —— 在指定位置添加数据
+        - [ ] get(int index) —— 返回索引位置的数据
+        - [ ] set(int index, Object o) —— 把 index 位置的值设为 o
+        - [ ] indexOf(Object o) —— 返回 o 在容器中索引位置（只返回第一个出现的）
+        - [ ] contains(Object o) —— 容器是否包含 o
+        - [ ] isEmpty() —— 容器是否为空
+        - [ ] toArray() —— 返回数组
+        - [ ] subList(int fromIndex, int toIndex)  —— 分片
+        - [ ] remove(int index) —— 移除
+        
+ 
 - 栈 
-    - [ ] 先进后出 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/08-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%A0%88.md)
-
+    - 先进后出，进出在同一端操作 
+    - 数组实现栈 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/08-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E6%A0%88.md)
+        - [ ] isFull() —— 判断栈满
+        - [ ] isEmpty() —— 判断栈空
+        - [ ] push() —— 入栈
+        - [ ] pop() —— 出栈
+        - [ ] list() —— 遍历栈
 - 队列
-    - [ ] 先进先出 有序
-    - [ ] 普通队列 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/012-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97.md)     
-        - enqueue(value) —— 在可容的情况下添加元素到尾部
-        - dequeue() —— 删除最早添加的元素并返回其值
-        - empty()
-        - full()
-    - [ ] 环形队列 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/012-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97.md#%E5%AE%9E%E7%8E%B0%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97)
+    - 先进先出 有序 队尾加数据 队头出数据
+    - 普通队列 数组实现[代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/012-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97.md)     
+        - [ ] isEmpty()
+        - [ ] isFull()
+        - [ ] getQueue() —— 出队列
+        - [ ] addQueue() —— 加数据
+        - [ ] size() —— 有效个数
+        - [ ] list() —— 遍历队列
+        - [ ] headQueue() —— 显示队列的头数据
+    - 环形队列 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/012-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E9%98%9F%E5%88%97.md#%E5%AE%9E%E7%8E%B0%E7%8E%AF%E5%BD%A2%E9%98%9F%E5%88%97)
         
 
 - 链表

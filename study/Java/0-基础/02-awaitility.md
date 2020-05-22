@@ -232,7 +232,7 @@ public class MyTest {
                        public Boolean call() throws Exception {
                            return service.getCount() == 4;
                        }
-                   });
+                   };
        } catch (Exception e) {
            Assert.fail("测试代码运行异常：" + e.getMessage() + "，代码位置：" + e.getStackTrace()[0].toString());
        }

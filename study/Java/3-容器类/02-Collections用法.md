@@ -59,3 +59,19 @@ class StringAddress{
 }
 ```
 
+## sort排序详解（Comparable & Comparator）
+
+1. Collections.sort() 对 Integer 泛型的 List 排序
+
+```java
+
+public class MyTest{
+    
+
+}
+
+
+
+
+
+```

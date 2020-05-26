@@ -2,7 +2,7 @@
 2. 对于随机访问get和set，ArrayList要优于LinkedList，因为LinkedList要移动指针；
 3. 对于添加和删除操作add和remove，LinkedList要比ArrayList快，因为ArrayList要移动数据；
 
-## ArrayList中的随机访问、添加和删除部分源码如下：\
+## ArrayList中的随机访问、添加和删除部分源码如下：
 
 ```
 //获取index位置的元素值
@@ -106,3 +106,102 @@ Node<E> node(int index) {
 
 从源码可以看出，ArrayList想要get(int index)元素时，直接返回index位置上的元素，而LinkedList需要通过for循环进行查找，虽然LinkedList已经在查找方法上做了优化，比如index < size / 2，则从左边开始查找，反之从右边开始查找，但是还是比ArrayList要慢。这点是毋庸置疑的。
         ArrayList想要在指定位置插入或删除元素时，主要耗时的是System.arraycopy动作，会移动index后面所有的元素；LinkedList主耗时的是要先通过for循环找到index，然后直接插入或删除。这就导致了两者并非一定谁快谁慢，下面通过一个测试程序来测试一下两者插入的速度：
+
+
+## 比较两个 ArrayList 中不同的元素
+
+```java
+/**
+  * 获取两个 List 的不同元素（假设 List 自身不存在重复元素）
+  */
+public class MyTest{
+    public static void main(String[] args){
+        List<String> list1 = new ArrayList<String>();
+        List<String> list2 = new ArrayList<String>();
+        for (int i = 0; i < 30000; i++){
+            list1.add("test" + i);
+        }
+        
+        for (int i = 0; i < 80000; i++){
+            list2.add("test" + i * 2);
+        }
+    }
+        
+    // 方法1：两层遍历查找
+    public static List<String> getDiff1(List<String> list1,List<String> list2){
+        List<String> diffList = new ArrayList<String>();
+        for (String str : list1){
+            if (!list2.contains(str)){
+                diffList.add(str);
+            }
+        }
+        return diff;
+    }
+    
+    // 方法2：两层遍历查找
+    public static List<String> getDiff2(List<String> list1,List<String> list2){
+        list1.retainAll(list2); // 返回值是 boolean
+        return list1;
+    }
+    
+    // 方法3，用 Map 存放 List1 和 List2 的元素作为 key，value 为其在 List1 和 List2 中出现的次数
+    // 出现次数为1的即为不同元素
+    public static List<String> getDiff3(List<String> list1,List<String> list2){
+        List<String> diffList = new ArrayList<String>();
+        Map<String,Integer> map = new HashMap<String,Integer>();
+        
+        for (String str : list1){
+            map.put(str, 1);
+        }
+        
+        for (String str : list2){
+            Integer count = map.get(string);
+            if(count != null){
+                map.put(str,++count);
+                continue;
+            }
+            map.put(str,1);
+        }
+        
+        for (Map.Entry<String,Integer> entry : map.entrySet()){
+            if(entry.getValue() == 1){
+                diffList.add(entry.getKey());
+            }
+        }
+        return diffList;
+    }
+    
+    // 优化方法3，减少put次数
+    public static List<String> getDiff4(List<String> list1,List<String> list2){
+        List<String> diff = new ArrayList<String>();
+        Map<String,Integer> map = new HashMap<String,Integer>();
+        List<String,Integer> maxList = list1;
+        List<String,Integer> minList = list2;
+        if (list2.size() > list1.size()){
+            maxList = list2;
+            minList = list1;
+        }
+        
+        for (String string : maxList){
+            map.put(string, 1);
+        }
+        
+        for (String string : minList){
+            Integer count = map.get(string);
+            if (count != null){
+                map.put(string,++count);
+                continue;
+            }
+            map.put(string, 1);
+        }
+        
+        for (Map.Entry<String,Integer> entry : map.entrySet()){
+            if(entry.getValue() == 1){
+                diff.add(entry.getKey());
+            }
+        }
+        return diff;
+    }
+
+}
+```

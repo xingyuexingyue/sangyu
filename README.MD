@@ -121,6 +121,35 @@
     - [ ] 浅拷贝和深拷贝 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/01-%E6%B5%85%E6%8B%B7%E8%B4%9D%E5%92%8C%E6%B7%B1%E6%8B%B7%E8%B4%9D.md)
     - [ ] awaitility [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/0-%E5%9F%BA%E7%A1%80/03-awaitility.md)
 
+- String
+    - 不可变，修改 String 实际创建了一个全新的 String 对象
+        - [ ] length() —— 长度
+        - [ ] charAt(int index) —— 索引所在字符串
+        - [ ] equalsIgnoreCase(String anotherString) —— 忽略大小写的比较
+        - [ ] substring(int beginIndex, int endIndex) —— 区间字符串
+        - [ ] split(String regex) —— 切割
+        - [ ] toUpperCase() —— 转大写
+        - [ ] contains(CharSequence s) —— 包含某字符串
+        - [ ] startsWith(String prefix) —— 以某某开头
+        - [ ] toCharArray() —— 转数组
+    - StringBuilder 可修改的字符串 线程不安全，方法类似
+    - StringBuffer 可修改的字符串 线程安全
+        - [ ] insert(int offset, String str) —— 执行位置插入
+        - [ ] indexOf(String str) —— 字符串的索引
+        - [ ] replace(int start, int end, String str) —— 指定区间替换
+        - [ ] subSequence(int start, int end)  —— 区间的内容
+        - [ ] reverse() —— 反转
+        - [ ] append(String str) —— 字符串追加到此字符序列
+        - [ ] toString() —— 复制一个字符串
+        - [ ] delete(int start, int end) —— 移除此序列的子字符串中的字符
+    - 其他
+        - [ ] 字符串转int Integer.parseInt(s) 
+        - [ ] int 转字符串 String.valueOf(i) 还有一种方式使用 + 
+        - [ ] 统计字符串出现的次数
+        - [ ] 统计文件中字符串出现的次数
+        - [ ] 字符串的反转 
+        - [ ] 取消首尾的空格
+        
         
       
 ## 数据结构
@@ -181,10 +210,15 @@
 - 链表
     - 特点：新增和删除更加高效
     - 单向链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md) 
-    - 统计单链表中有效节点的个数 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md#%E7%BB%9F%E8%AE%A1%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B8%AD%E6%9C%89%E6%95%88%E8%8A%82%E7%82%B9%E7%9A%84%E4%B8%AA%E6%95%B0)
-    - 查找单链表中的倒数第k个节点[代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md#%E6%9F%A5%E6%89%BE%E5%8D%95%E9%93%BE%E8%A1%A8%E4%B8%AD%E7%9A%84%E5%80%92%E6%95%B0%E7%AC%ACk%E4%B8%AA%E8%8A%82%E7%82%B9sina)
+        - [ ] add()
+        - [ ] list()
+        - [ ] insert()
+        - [ ] update()
+        - [ ] del()
+        - [ ] length —— 链表的有效节点个数
+        - [ ] findLastIndexNode() —— 倒数第k个节点
+        - [ ] reversePrint - 反转打印
     - 单链表的反转 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md#%E5%8D%95%E9%93%BE%E8%A1%A8%E7%9A%84%E5%8F%8D%E8%BD%ACtencent)
-    - 从尾到头打印单链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/09-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8D%95%E5%90%91%E9%93%BE%E8%A1%A8.md#%E4%BB%8E%E5%B0%BE%E5%88%B0%E5%A4%B4%E6%89%93%E5%8D%B0%E5%8D%95%E9%93%BE%E8%A1%A8baidu)
     - 双向链表 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/3-%E5%AE%B9%E5%99%A8%E7%B1%BB/010-%E6%89%8B%E5%8A%A8%E5%AE%9E%E7%8E%B0%E4%B8%80%E4%B8%AA%E5%8F%8C%E5%90%91%E9%93%BE%E8%A1%A8.md)
 
 - 哈希表
@@ -284,16 +318,17 @@
         
 ## 测试相关的知识
 
-- 测试包含点
+- 功能测试
     - [通过举例说明（文章）](https://github.com/xingyuexingyue/xingyue/blob/master/%E6%B5%8B%E8%AF%95%E7%9F%A5%E8%AF%86%E5%9F%BA%E7%A1%80/%E6%B5%8B%E8%AF%95%E5%AE%9E%E4%BE%8B.md#%E5%8A%9F%E8%83%BD%E6%80%A7%E6%B5%8B%E8%AF%95)
     - [ ] 界面测试 
     - [ ] 用户易用性测试
     - [ ] 功能性测试
     - [ ] 兼容测试率
     - [ ] 压力测试
-    - [ ] 性能测试
+    - [ ] 性能测试 [举例](https://github.com/xingyuexingyue/xingyue/blob/master/%E5%B7%A5%E5%85%B7/Jmeter.md)
     - [ ] APP新老版本兼容
-- 测试流程有哪些
+    
+- 测试流程
     - [ ] 1.需求评审
     - [ ] 2.需求评审后集中有问题的地方与产品私下后交流
     - [ ] 3.用例编写
@@ -308,9 +343,10 @@
     - [ ] 6.上线
         - 通知开发上线，先上预环境（先上后端再上前端）（上线后对新老功能进行回归）
         - 通知开发上正式线上（上线后对新老功能回归、最好有回归的checklist，需要用外网）
-- 如何开展一个性能测试
-    - [ ] [JMeter实现多用户并发功能测试(文章)](https://github.com/xingyuexingyue/xingyue/blob/master/%E5%B7%A5%E5%85%B7/Jmeter.md)
 
+
+- APP 自动化
+    - 获得 app 的包名
 - 一些工具
     - charles 
         - [ ] [charles(文章)](https://github.com/xingyuexingyue/xingyue/blob/master/%E5%B7%A5%E5%85%B7/Charles.md)

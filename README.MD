@@ -56,13 +56,6 @@
     - 线程的优先级 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/021-%E8%AE%BE%E7%BD%AE%E7%BA%BF%E7%A8%8B%E4%BC%98%E5%85%88%E7%BA%A7.md)
         - [ ] getPriority() 读线程的优先级
         - [ ] setPriority() 修改线程优先级
-    - 线程基本方法 [代码位置]()
-        - [ ] wait()
-        - [ ] notify()
-        - [ ] notifyAll()
-        - [ ] sleep()
-        - [ ] join()
-        - [ ] yield()
     - 加锁相关 
         - [ ] 为某个对象加锁 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/01-%E4%B8%BA%E6%9F%90%E4%B8%AA%E5%AF%B9%E8%B1%A1%E5%8A%A0%E9%94%81.md)
         - [ ] this 加锁 [代码位置](https://github.com/xingyuexingyue/sangyu/blob/master/study/Java/1-%E5%B9%B6%E5%8F%91/02-this%E5%8A%A0%E9%94%81.md)
@@ -344,9 +337,6 @@
         - 通知开发上线，先上预环境（先上后端再上前端）（上线后对新老功能进行回归）
         - 通知开发上正式线上（上线后对新老功能回归、最好有回归的checklist，需要用外网）
 
-
-- APP 自动化
-    - 获得 app 的包名
 - 一些工具
     - charles 
         - [ ] [charles(文章)](https://github.com/xingyuexingyue/xingyue/blob/master/%E5%B7%A5%E5%85%B7/Charles.md)
@@ -388,7 +378,7 @@
     
 - 微服务下的测试
     - [ ] mock 
-    - [ ] 使用dubbo mock请求方的响应数据  
+    - [ ] 使用 dubbo mock请求方的响应数据  
     
 - 练习
     - [ ] 一个完整的CURD项目 [](https://github.com/xingyuexingyue/SSM-CURD)

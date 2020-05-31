@@ -205,3 +205,43 @@ public class MyTest{
 
 }
 ```
+
+## List.equals
+
+List.equals指出，如果两个列表包含相同的大小，内容和元素顺序，则它们是相等的。
+
+您可以使用这两个列表进行排序Collections.sort()，然后使用equals方法。稍好一点的解决方案是首先检查它们在订购前是否具有相同的长度，如果它们不是，则它们不相等，然后进行排序，然后使用等于。例如，如果你有两个字符串列表，它会是这样的：
+
+```
+public  boolean equalLists(List<String> one, List<String> two){     
+    if (one == null && two == null){
+        return true;
+    }
+
+    if((one == null && two != null) 
+      || one != null && two == null
+      || one.size() != two.size()){
+        return false;
+    }
+
+    //to avoid messing the order of the lists we will use a copy
+    //as noted in comments by A. R. S.
+    one = new ArrayList<String>(one); 
+    two = new ArrayList<String>(two);   
+
+    Collections.sort(one);
+    Collections.sort(two);      
+    return one.equals(two);
+}
+```
+
+## ArrayList - 如何判断两个列表是否相等，顺序无关紧要
+
+例
+
+```
+ArrayList<String> listA = {"a", "b", "c"}
+ArrayList<String> listB = {"b", "c", "a"}
+```
+
+listA.containsAll(listB) && listB.containsAll(listA)
